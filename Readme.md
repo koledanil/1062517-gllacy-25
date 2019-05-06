@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Колесниченко Данил](https://up.htmlacademy.ru/htmlcss/25/user/1062517).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Поданев](https://htmlacademy.ru/profile/mpodanev).
 
 ---
 
