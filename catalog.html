@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <title>Мороженное от компании Глейси</title>
+  <title>мороженое от компании Глейси</title>
 </head>
   <body>
     <header class="main-header">
@@ -11,19 +11,76 @@
           <img src="img/logo-gllacyshop.svg" width="154" height="64" alt="Логотип магазин Глэйси">
         </a>
         <ul class="site-navigation">
-          <li class="site-navigation active"><a href="#">Каталог</a></li>
+          <li><a href="#">Каталог</a>
+          <ul class="sub-menu-list">
+            <li><a><b>Новинки</b></a></li>
+            <li><a href="#">Сливочное</a></li>
+            <li><a href="#">Щербеты</a></li>
+            <li><a href="#">Фруктовый лед</a></li>
+            <li><a href="#">Мелорин</a></li>
+          </ul>
           <li><a href="#">Доставка и оплата</a></li>
           <li><a href="#">О компании</a></li>
         </ul>
         <ul class="site-functional">
-          <li><a class="functional-button" href="#">Поиск</a></li>
-          <li><a class="functional-button" href="#">Вход</a></li>
-          <li><a class="functional-button active" href="#">2 товара</a></li>
+          <li><a class="functional-button" href="#">Поиск</a>
+            <ul>
+              <li>
+                <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+                  <label for="search-id">Поисковый запрос</label>
+                  <input type="search" id="search-id" name="search" placeholder="Что ищем?">
+                  <button class="visually-hidden" type="submit" name="button-search">Искать</button>
+                </form>
+          </li>
         </ul>
-        <p>
-          С 10 до 20, ежедневно <br>
-          <span>8 812 450-25-25</span>
-        </p>
+          <li><a class="functional-button" href="#">Вход</a>
+            <ul>
+              <li><h2 class="visually-hidden">Личный кабинет</h2>
+                <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                  <label class="visually-hidden" for="email-id">Электронная почта</label>
+                  <input class="login-fields" type="email" name="email" id="email-id" placeholder="Электронная почта" autofocus autocomplete="email" required>
+                  <label class="visually-hidden" for="password-id">Пароль</label>
+                  <input class="login-fields" type="password" name="password" id="password-id" placeholder="Пароль" autocomplete="current-password" required>
+                <a href="#">Забыли пароль?</a>
+                <a href="#">Новая регистрация</a>
+                <button class="button" type="submit" name="login-button">Войти</button>
+                </form></li>
+            </ul>
+          <li><a class="functional-button active" href="#">2 товара</a>
+            <ul class="modal order-full">
+              <li class="order-full-item">
+                <table>
+                  <caption class="visually-hidden">Ваша корзина</caption>
+                  <tr>
+                    <th>Действие</th>
+                    <th>Изображение товара</th>
+                    <th>Название</th>
+                    <th>Количество</th>
+                    <th>Стоимость</th>
+                  </tr>
+                  <tr>
+                    <td><button class="small-close" type="button">Удалить</button></td>
+                    <td><img src="img/ice-cream-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
+                    <td>Пломбир с апельсиновым джемом</td>
+                    <td>1,5 кг x <span class="order-prdice-item">200</span></td>
+                    <td>300 руб.</td>
+                  </tr>
+                  <tr>
+                    <td><button class="small-close" type="button">Удалить</button></td>
+                    <td><img src="img/ice-cream-3.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+                    <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                    <td>1,5 кг x <span class="order-prrice-item">300</span></td>
+                    <td>450 руб.</td>
+                  </tr>
+                  <tr>
+                    <td class="order-price-summary"><b>Итого: <span>750 руб.</span></b></td>
+                  </tr>
+                </table>
+                <button class="button" type="button" name="button-order-buy">Оформить заказ</button>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </nav>
     </header>
 <main>
@@ -32,12 +89,48 @@
       <li><a href="#">Каталог</a></li>
       <li><a>Сливочное</a></li>
   </ul>
-  <h1>Сливочное мороженное</h1>
-  <form class="sorted-by" action="index.html" method="post">
-
-  </form>
+  <h1>Сливочное мороженое</h1>
+<!--Фильтр товаров-->
 <section>
-  <h2 class="visually-hidden">Результаты сортировки</h2>
+  <h2 class="visually-hidden">Фильтр товаров</h2>
+  <form class="filters" action="https://echo.htmlacademy.ru" method="get">
+    <label for="filter-by-popularity-id">Сортировка:</label>
+    <select name="filter-by-popularity" id="filter-by-popularity-id">
+      <option value="most-popular">по популярности</option>
+      <option value="max-price">от дорогих до дешевых</option>
+      <option value="min-price">от дешевых до дорогих</option>
+      <option value="new">от дешевых до дорогих</option>
+      <option value="on-sale">от дешевых до дорогих</option>
+    </select>
+    <label for="price-range-id">Цена: 100 руб. - 500 руб.</label>
+    <input type="range" name="price-range" id="price-range-id" min="100" max="500" step="10">
+    <fieldset>
+      <legend>Жирность:</legend>
+      <input type="radio" name="fat-radio" id="fat-radio-id" value="0">
+      <label for="fat-radio-id">0%</label>
+      <input type="radio" name="fat-radio" id="fat-radio-id-10" value="0" checked>
+      <label for="fat-radio-id-10">до 10%</label>
+      <input type="radio" name="fat-radio" id="fat-radio-id-30" value="0">
+      <label for="fat-radio-id-30">30%</label>
+      <input type="radio" name="fat-radio" id="fat-radio-id-40" value="0">
+      <label for="fat-radio-id-40">свыше 30%</label>
+    </fieldset>
+    <fieldset>
+      <legend>Наполнители</legend>
+      <input type="checkbox" name="fill-checkbox" id="fill-checkbox-id-chocolate" value="chocolate" checked>
+      <label for="fill-checkbox-id-chocolate">шоколадные</label>
+      <input type="checkbox" name="fill-checkbox" id="fill-checkbox-id-sugar" value="sugar" checked>
+      <label for="fill-checkbox-id-sugar">сахарные присыпки</label>
+      <input type="checkbox" name="fill-checkbox" id="fill-checkbox-id-fruit" value="fruit">
+      <label for="fill-checkbox-id-fruit">фрукты</label>
+      <input type="checkbox" name="fill-checkbox" id="fill-checkbox-id-syrup" value="syrup">
+      <label for="fill-checkbox-id-syrup">сиропы</label>
+      <input type="checkbox" name="fill-checkbox" id="fill-checkbox-id-jam" value="jam">
+      <label for="fill-checkbox-id-jam">джемы</label>
+    </fieldset>
+    <button type="submit" name="button-apply-filters">Применить</button>
+  </form>
+  <h2 class="visually-hidden">Результаты фильтрации</h2>
   <ul class="catalog-list">
     <li class="catalog-item">
       <a href="#"><img src="img/ice-cream-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
@@ -124,7 +217,7 @@
     </ul>
   <p class="footer-copyright">
   <img src="img/logo-htmlacademy.svg" width="109" height="38" alt="Логотип HTML Академии">
-  Сделано: <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+  Сделано: <a href="https://htmlacademy.ru">HTML Academy</a>
   </p>
 </footer>
 </body>
