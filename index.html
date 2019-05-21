@@ -23,16 +23,7 @@
           <li><a href="#">О компании</a></li>
         </ul>
         <ul class="site-functional">
-          <li><a class="functional-button" href="#">Поиск</a>
-            <ul>
-              <li>
-                <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-                  <label for="search-id">Поисковый запрос</label>
-                  <input type="search" id="search-id" name="search" placeholder="Что ищем?">
-                  <button class="visually-hidden" type="submit" name="button-search">Искать</button>
-                </form>
-          </li>
-        </ul>
+          <li><a class="functional-button" href="#">Поиск</a></li>
           <li><a class="functional-button" href="#">Вход</a>
             <ul>
               <li><form class="login-form" action="https://echo.htmlacademy.ru" method="post">
@@ -46,9 +37,13 @@
                 <button class="button" type="submit" name="login-button">Войти</button>
                 </form></li>
             </ul>
-          <li><a class="functional-button" href="#">Пусто</a>
-          </li>
-        </ul>
+            <li><a class="functional-button" href="#">Пусто</a></li>
+          </ul>
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+            <label for="search-id">Поисковый запрос</label>
+            <input type="search" id="search-id" name="search" placeholder="Что ищем?">
+            <button class="visually-hidden" type="submit" name="button-search">Искать</button>
+          </form>
       </nav>
     </header>
     <p>
@@ -60,18 +55,26 @@
 <!--Далее идет слайдер-->
     <section class="main-hero-slider">
       <h2 class="visually-hidden">Новинки от Глэйси</h2>
+      <ul>
+        <li>
       <figure>
         <img src="img/hero-ice-cream-1.png" width="260" height="244" alt="">
         <p class="main-hero-slider-title">Крем-брюле и пломбир  с малиновым джемом</p>
       </figure>
+        </li>
+        <li>
       <figure>
         <img src="img/hero-ice-cream-2.png" width="260" height="244" alt="">
         <p class="main-hero-slider-title">Шоколадный пломбир и лимонный сорбет</p>
       </figure>
+        </li>
+        <li>
       <figure>
         <img src="img/hero-ice-cream-3.png" width="260" height="244" alt="">
         <p class="main-hero-slider-title">Пломбир с помадкой и клубничный щербет</p>
       </figure>
+      </li>
+    </ul>
       <button class="button" type="button" name="button-hero-slider-buy">Давайте оба!</button>
       <ul class="pagination-list">
         <li class="pagination-slider pagination-slider-item-current"><a>1</a></li>
@@ -165,7 +168,7 @@
     <b>8 812 450-25-25</b><br>
     (с 10 до 20 ежедневно)
   </p>
-  <button type="button" name="button-feedback">Форма обратной связи</button>
+  <a href="#" class="button-feedback">Форма обратной связи</a>
 </section>
   </main>
   <footer class="main-footer">
