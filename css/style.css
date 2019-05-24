@@ -1,0 +1,414 @@
+body {
+  margin:0px;
+  padding: 0px;
+  font-family: "Roboto", arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #849D8F;
+}
+
+/*Наследование шрифта кнопками и инпутами*/
+input,
+button {
+  font: inherit;
+}
+
+/*Отключаем маркеры в навигации*/
+nav li,
+.main-hero-slider-item,
+.features-item,
+.main-footer-item,
+.catalog-item {
+  list-style-type: none;
+}
+
+/*Ссылка белого цвета и с прозрачнвм подчеркиванием*/
+.white-link{
+color: #ffffff;
+text-decoration: none;
+border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/*Черная ссылка со стандартным подчеркиванием*/
+.dark-link {
+  color: #323232;
+}
+/*Черная ссылка с прозрачным подчеркиванием*/
+.dark-link-underline {
+  text-decoration:none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/*Меню Каталог - доставка - О компании*/
+.site-navigation {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+/*Наведение, фокус, активная для меню Каталог - доставка - О компании.
+not --> исключает второй уровень каталога*/
+.site-navigation a:not(.dark-link):hover {
+  background-color: #F7F6F3;
+  color: #323232;
+  font-weight: 700;
+  box-shadow: inset 0 2px 1px 0 #696969;
+}
+.site-navigation a:not(.dark-link):focus {
+  background-color: #EDEDED;
+  color: #323232;
+}
+.site-navigation a:not(.dark-link):active {
+  background-color: #D07058;
+  color: #323232;
+}
+
+/*Наведение, фокус, активная для подменю каталог*/
+.sub-menu-list a:hover {
+  background-color: #FBDED7;
+}
+.sub-menu-list a:focus {
+  background-color: #F6B5A5;
+}
+.sub-menu-list a:active {
+  background-color: #D07058;
+}
+
+/*Наведение, фокус, активная для черных ссылок (кроме главн. меню)*/
+.login-form a:hover,
+.login-form a:focus,
+.login-form a:active,
+.new-article a:hover,
+.new-articlea:focus,
+.new-article a:active {
+    color: #E84D37;
+    text-decoration:none;
+    border-bottom: 1px solid rgba(232, 77, 55, 0.3);
+}
+
+/*Наведение, фокус, активная для белых ссылок (кроме главн. меню)*/
+.hit a:not(.catalog-img):hover,
+.hit a:not(.catalog-img):focus,
+.hit a:not(.catalog-img):active,
+.main-footer a:hover,
+.main-footer a:focus,
+.main-footer a:active,
+.catalog-list a:not(.catalog-img):hover,
+.catalog-list a:not(.catalog-img):focus,
+.catalog-list a:not(.catalog-img):active
+ {
+  color: #FFBC9E;
+  text-decoration:none;
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+}
+
+/*Бекграунд для поиска/формы входа/корзины/второго уровня меню*/
+.background-nav {
+  background-color: #F8F7F4;
+  box-shadow: 0 20px 20px 0 rgba(0,0,0,0.40);
+}
+
+.sub-menu-list a {
+  font-weight: 400;
+  text-decoration: none;
+}
+
+/*Cтиль кнопок Поиск и Вход, Корзина*/
+.functional-button {
+  font-weight: 500;
+  line-height: 16px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.functional-button { /*Прозрачный фон для кнопок поиск / вход */
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/*Эффект наведения фон для кнопок поиск / вход */
+.functional-button:hover,
+.functional-button:focus,
+.functional-button:active {
+  background: #F8F7F4;
+  color: #323232;
+}
+
+/*Красная кнпока - отправить / хочу шоколадки / давайте оба*/
+.main {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  background-image: linear-gradient(0deg, #E74A35 0%, #F26843 100%);
+  box-shadow: 0 1px 2px 0 #AC1000;
+}
+
+.main:hover {
+background-image: linear-gradient(180deg, #F38567 0%, #EB6F5D 100%);
+box-shadow: 0 1px 2px 0 #AC1000;
+}
+
+.main:focus {
+  background-image: linear-gradient(0deg, #EB795E 0%, #DA4C35 67%);
+  box-shadow: inset 0 2px 2px 0 #942718;
+}
+
+/*Cтиль нмоера телефона и режима работы*/
+.timetable-shop {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.timetable-shop span { /*Отдельный дизайн для номера*/
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.main-hero-slider-title {
+  font-size: 60px;
+  font-weight:700;
+  line-height: 60px;
+}
+
+/*Далее идут два промо-блока - малинки и шоколадки*/
+.main-promo-1 {
+  background-color: #C82C55;
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/raspberry-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.main-promo-1 b {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 41px;
+}
+
+.main-promo-1 p{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.main-promo-2 {
+  background-color: #3E1E0E;
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/chocolate-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.main-promo-2 b {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 41px;
+}
+
+.main-promo-2 p{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.features-list { /*Преимущества магазина Глэйси*/
+  background-color: #EEE3CD;
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/wafer-background.jpg");
+  background-repeat: repeat;
+  color: #323232;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.features-list b {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.new-article{ /*Раздел новая статья*/
+background-color: #ffffff;
+width: 560px;
+background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/article-background.jpg");
+background-repeat: no-repeat;
+background-position: right;
+background-size: contain;
+color: #323232;
+font-size: 16px;
+line-height: 22px;
+font-weight: 500;
+}
+
+.new-article b{
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.email-subscribe { /*Раздел email подписка*/
+  background-color: #F8F7F4;
+  width: 560px;
+  color: #5A5A5A;
+}
+
+/*Оформление раздела контактов*/
+.company-credential {
+  background-color: rgba(255, 255, 255, 0.98);
+  color: #323232;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.company-credential b{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+/*Корзина с двумя товарами в ней*/
+.order-full-item {
+  color: #323232;
+}
+
+.order-full-item .order-price-item { /*Измен цвет цены товара*/
+  color: #999999;
+}
+
+.order-price-summary { /*Итого по правому краю*/
+  text-align: right;
+  border-top: 1px solid #CACAC7;
+}
+/*Привязывает все кнопки (с этим классом) к правому краю*/
+.button-right{
+  text-align: right;
+}
+
+
+.pagination-slider { /*Убираем маркеры в пагинации слайдера*/
+  list-style: none;
+}
+
+.pagination-slider a { /*Убираем подчеркивание в пагинации слайдера*/
+  border-bottom: none;
+}
+
+.product-price {/*Размер цены морож. на карточках*/
+  font-size: 45px;
+  line-height: 13px;
+  text-shadow: 0.5px 0.9px 3px rgba(49,50,53,0.50);
+  }
+
+.product-price span {
+  font-size: 30px;
+}
+
+/*Пагинация в каталоге*/
+.pagination-catalog {
+  list-style: none;
+  font: 16px;
+  font-weight: 500;
+}
+
+.pagination-catalog a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.pagination-catalog a:hover,
+.pagination-catalog a:focus {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.pagination-catalog a:active {
+  color: #323232;
+  background: #ffffff;
+}
+
+.filter fieldset {
+   border: none;
+}
+
+.filter {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+/*Дизайн подписей к фильтрам*/
+.filter-title {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.filter-background {/*Задаем стиль фона для полей сортировка/жирность/цена/наполнители*/
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    height: 39px;
+}
+
+.popularity { /*Оформление текста по поулярности*/
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.popularity:hover{
+background: rgba(255, 255, 255, 0.2);
+color: #323232;
+}
+
+.filter-apply { /*Оформление кнопки применить*/
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 18px;
+  height: 39px;
+}
+
+.filter-apply:hover{
+    background: #FFFFFF;
+    color: #323232;
+}
+
+.filter-apply:active{
+  background: #EDEDED;
+  box-shadow: inset 0 2px 1px 0 #696969;
+  color: #323232;
+}
+
+/*Оформляем чекбоксы и радио*/
+.filter-checkbox:hover + label,
+.filter-checkbox:hover + label {
+  cursor: pointer;
+  color:#323232;
+}
+
+.filter-radio:hover + label,
+.filter-radio:hover + label
+ {
+  cursor: pointer;
+  color:#323232;
+}
+
+/*Оформляем окно обратная связь*/
+.modal-feedback h2{
+  color:#323232;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+/*Скрываем элементы, к-ые имеют данный класс*/
+.visually-hidden {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+iframe {
+  width:1200px;
+  height:430px;
+  border:0;
+}
