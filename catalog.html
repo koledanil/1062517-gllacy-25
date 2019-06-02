@@ -9,6 +9,54 @@
 </head>
   <body>
     <header class="main-header">
+      <nav class="nav-container">
+        <div class="logo-site-navigation-wrap">
+        <a class="main-logo" href="index.html">
+          <img src="img/logo-gllacyshop.svg" width="154" height="64" alt="Логотип магазин Глэйси">
+        </a>
+        <ul class="site-navigation">
+          <li><a class="white-link" href="#">Каталог</a>
+          <ul class="sub-menu-list background-nav">
+            <li><a class="dark-link"><b>Новинки</b></a></li>
+            <li><a class="dark-link" href="#">Сливочное</a></li>
+            <li><a class="dark-link" href="#">Щербеты</a></li>
+            <li><a class="dark-link" href="#">Фруктовый лед</a></li>
+            <li><a class="dark-link" href="#">Мелорин</a></li>
+          </ul>
+          <li><a class="white-link" href="#">Доставка и оплата</a></li>
+          <li><a class="white-link" href="#">О компании</a></li>
+        </ul>
+</div>
+        <ul class="site-functional">
+          <li><a class="functional-button" href="#">Поиск</a></li>
+          <li><a class="functional-button" href="#">Вход</a>
+            <ul class="login-form background-nav">
+              <li><form action="https://echo.htmlacademy.ru" method="post">
+                <h2 class="visually-hidden">Личный кабинет</h2>
+                  <label class="visually-hidden" for="email-id">Электронная почта</label>
+                  <input class="login-fields" type="email" name="email" id="email-id" placeholder="Электронная почта" autocomplete="email" required>
+                  <label class="visually-hidden" for="password-id">Пароль</label>
+                  <input class="login-fields" type="password" name="password" id="password-id" placeholder="Пароль" autocomplete="current-password" required>
+                <p class="button-right"><a class="dark-link dark-link-underline" href="#">Забыли пароль?</a>
+                <a class="dark-link dark-link-underline" href="#">Новая регистрация</a></p>
+                <button class="button main" type="submit" name="login-button"><span></span>Войти</button>
+                </form></li>
+            </ul>
+            <li><a class="functional-button" href="#">Пусто</a></li>
+          </ul>
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+            <label class="visually-hidden" for="search-id">Поисковый запрос</label>
+            <input type="search" id="search-id" name="search" placeholder="Что ищем?">
+            <button class="visually-hidden" type="submit" name="button-search">Искать</button>
+          </form>
+      </nav>
+      <p class="timetable-shop">
+      С 10 до 20, ежедневно
+      <span>8 812 450-25-25</span>
+      </p>
+
+    </header>
+    <!-- <header class="main-header">
       <nav>
         <a class="main-logo" href="index.html">
           <img src="img/logo-gllacyshop.svg" width="154" height="64" alt="Логотип магазин Глэйси">
@@ -83,15 +131,18 @@
           <span>8 812 450-25-25</span>
           </p>
       </nav>
-    </header>
+    </header> -->
 <main>
   <ul class="breadcumbs">
       <li><a class="white-link" href="#">Главная</a></li>
       <li><a class="white-link" href="#">Каталог</a></li>
       <li><a>Сливочное</a></li>
   </ul>
+<div class="title-inner">
   <h1>Сливочное мороженое</h1>
+</div>
   <h2 class="visually-hidden">Фильтр товаров</h2>
+<div class="fliter-wrap"
   <form class="filter" action="https://echo.htmlacademy.ru" method="get">
     <label class="filter-title" for="filter-by-popularity-id">Сортировка:</label>
     <select class="filter-background popularity" name="filter-by-popularity" id="filter-by-popularity-id">
@@ -101,12 +152,11 @@
       <option value="new">от дешевых до дорогих</option>
       <option value="on-sale">от дешевых до дорогих</option>
     </select>
-
-<div class="filter-background">
+<div class="filter-background price-range">
   <label for="price-range-id">Цена: 100 руб. - 500 руб.</label>
   <input type="range" name="price-range" id="price-range-id" min="100" max="500" step="10">
 </div>
-    <fieldset class="filter-background">
+    <fieldset class="filter-background fat-radio">
       <legend class="filter-title">Жирность:</legend>
       <input class="filter-radio" type="radio" name="fat-radio" id="fat-radio-id" value="0">
       <label for="fat-radio-id">0%</label>
@@ -117,7 +167,7 @@
       <input class="filter-radio" type="radio" name="fat-radio" id="fat-radio-id-40" value="0">
       <label for="fat-radio-id-40">свыше 30%</label>
     </fieldset>
-    <fieldset class="filter-background">
+    <fieldset class="filter-background filling-checkbox">
       <legend class="filter-title">Наполнители</legend>
       <input class="filter-checkbox" type="checkbox" name="fill-checkbox" id="fill-checkbox-id-chocolate" value="chocolate" checked>
       <label for="fill-checkbox-id-chocolate">шоколадные</label>
@@ -132,9 +182,10 @@
     </fieldset>
     <button class="filter-apply" type="submit" name="button-apply-filters">Применить</button>
   </form>
-  <h2 class="visually-hidden">Результаты фильтрации</h2>
+</div>
+<h2 class="visually-hidden">Результаты фильтрации</h2>
 <section>
-  <ul class="catalog-list">
+  <ul class="catalog-list catalog">
     <li class="catalog-item">
       <a class="catalog-img" href="#"><img class="catalog-img" src="img/ice-cream-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
       <b class="product-price">310 ₽ <span>/кг</span></b>
@@ -205,23 +256,25 @@
   </ul>
 </section>
 </main>
+
 <footer class="main-footer">
-    <ul class="main-footer-item">
+    <ul class="main-footer-item social">
       <li><a class="social-media white-link" href="#">Твиттер</a></li>
       <li><a class="social-media white-link" href="#">Инстаграм</a></li>
       <li><a class="social-media white-link" href="#">Фейсбук</a></li>
       <li><a class="social-media white-link" href="#">Вконтакте</a></li>
     </ul>
-    <ul class="main-footer-item">
+    <ul class="main-footer-item link">
       <li><a class="white-link distributor-important"><b>Для поставщиков</b></a></li>
-      <li><a class="white-link" href="#">О производстве</a></li>
       <li><a class="white-link" href="#">Наши документы</a></li>
+      <li><a class="white-link" href="#">О производстве</a></li>
       <li><a class="white-link" href="#">Экологические стандарты</a></li>
     </ul>
-  <p class="footer-copyright">
-  <img src="img/logo-htmlacademy.svg" width="109" height="38" alt="Логотип HTML Академии">
-  Сделано: <a class="white-link" href="https://htmlacademy.ru">HTML Academy</a>
-  </p>
+<div class="footer-copyright">
+<img src="img/logo-htmlacademy.svg" width="109" height="38" alt="Логотип HTML Академии">
+    <p>Сделано: <a class="white-link" href="https://htmlacademy.ru">HTML Academy© 2019</a>
+</p>
+</div>
 </footer>
 </body>
 </html>

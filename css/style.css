@@ -1,6 +1,7 @@
 body {
   margin:0px;
   padding: 0px;
+
   font-family: "Roboto", arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
@@ -48,6 +49,440 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   font-weight: 700;
 }
 
+
+
+/* Разметка сетки */
+/* 1.Разметка главного меню */
+/* 1.1 Убираем маргины и паддинги в меню */
+.nav-container ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.main-header img {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* 1.2 Добавляем контейнер по центру для меню / лого и так далее */
+.main-header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+  padding-right: 25px;
+  padding-left: 25px;
+  width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 1.3 Объединяем логотип и пункты меню в один контейнер */
+.logo-site-navigation-wrap {
+  display: flex;
+}
+
+/* 1.4 Разносим логотип+навигацию влево и функц. кнопки вправо */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*1.5 Режим рабоыт, выключка по правому*/
+.timetable-shop {
+  display: flex;
+  flex-direction: column;
+}
+
+/*1.6 Вертикальное центрирование навигацион. меню*/
+.site-navigation {
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+}
+
+
+/*1.7 Вертикальное центрирование фукнциональных кнопок*/
+.site-functional {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+
+/* 2. Размечаем слайдер */
+/* 2.1 Добавляем общий контейнер */
+.main-hero-slider-wrap {
+  display: flex;
+  width: 1150px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+
+}
+
+/* 2.2 Обнуляем UL*/
+.main-hero-slider-wrap > * {
+  margin: 0px;
+  padding: 0px;
+}
+.main-hero-slider-wrap > * > * {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* 2.3 Выравниваем кнопку и текст по центру */
+.main-hero-slider-wrap div {
+position: relative;
+}
+
+/* 2.4 Обнуляем расстояние между картинкой/текстом и кнопкой */
+.main-hero-slider-wrap p,
+.main-hero-slider-wrap img {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* 2.5 Задаем позиционирование для заголовка с кнопкой */
+.main-hero-slider-item div {
+  position: absolute;
+  top: 390px;
+  text-align: center;
+}
+/* 2.6 Задаем расстояние от заголовка до кнопки */
+.main-hero-slider-item p {
+  padding-bottom: 40px;
+}
+
+/* 3. Размечаем промо */
+/*3.1 Делаем контейнер */
+.main-promo-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 1150px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* 3.2 Задаем размеры для рекламного блока 1 */
+.main-promo-1
+{min-height: 230px;
+width: 560px;
+}
+
+/* Задаем размеры для рекламного блока 2 */
+.main-promo-2
+{min-height: 230px;
+width: 560px;
+}
+
+/* 4. Размечаем хитов */
+/* 4.1 Обнуляем все растояния у хитов. */
+.hit-wrap > * {
+  margin:0;
+  padding:0;
+  border:0
+}
+
+/* 4.2 Добавляем контейнер для хитов в общий*/
+.catalog-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-left: 0;
+}
+
+/* 4.3 Задаем параметры товара*/
+.catalog-list li {
+  margin-right: 25px;
+  width: 267px;
+  height: auto;
+}
+
+/* 4.4 Задаем параметры товара*/
+.catalog-list li:nth-of-type(4n+4) {
+    margin-right: 0px;
+}
+
+
+/* 4.5 Размещаем надпись Хит */
+.catalog-item {
+  position: relative;
+}
+
+.hit {
+  position: absolute;
+  top: 0px;
+  left:0px;
+}
+
+/* 4.6 Размещаем цену */
+.catalog-item b {
+  position: absolute;
+  top: 225px;
+  left:0px;
+}
+
+/* 5. Доавляем разметку преимуществ глэйси */
+/* 5.1 Добавляем общий контейнер */
+
+.features-list-wrap {
+  width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.features-list {
+  flex-direction: column;
+  display: flex;
+  box-sizing: border-box;
+  padding: 25px;
+}
+
+/* 5.2 Добавляем разметку колонок преимуществ */
+.features-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* 5.3 Обнуляем расстояния в списках */
+.features-list > * {
+  margin:0;
+  padding:0;
+  border:0
+}
+
+/* 5. Задаем размер кололнки преимуществ */
+.features-item li {
+    width: 540px;
+}
+
+
+/* 6. Разметка популярной статьи + формы подписки */
+/* 6.1 Добавляем контейнер для статьи формы*/
+.article-subscribe-wrap {
+  display: flex;
+
+  width: 1150px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
+
+/*6.2 Добавляем размеры статьи и формы подписки*/
+.new-article {
+  width: 560px;
+  height: 220px;
+}
+
+.email-subscribe {
+  width: 560px;
+  height: 208px;
+  border-radius: 10px;
+}
+
+/* 7. Разметка карты */
+/* 7.1 Добавляем контейнер для карты */
+.main-map {
+  position: relative;
+  display: flex;
+  width: 1150px;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 7.1 Позиционируем контактные данные */
+.company-credential {
+  display: block;
+  position: absolute;
+  top:60px;
+  right:60px;
+  width: 305px;
+  height:305px;
+}
+
+/* 8. Разметка футера */
+/* 8.1 Обнуляем все отступы */
+.main-footer > * {
+  margin:0;
+  padding:0;
+  border:0
+}
+/* 8.1 Добавляем общий контйнер для футера */
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 1150px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  min-height: 100px;
+
+}
+
+/* 8.2 Контейнер для соц. сетей */
+.social {
+  display: flex;
+  width: 267px;
+}
+
+/* 8.3 Контейнер для ссылок */
+.link{
+  column-count: 2;
+  column-gap: 0px;
+}
+
+/* 8.4 Контейнер для создателя сайта */
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: auto;
+}
+
+
+/* ************Разметка каталога************ */
+
+/* 8.5.1 Разметка крошек и заголовка */
+/* 8.5.2 Обнуляем расстояния в крошуках */
+.breadcumbs {
+
+  margin: 0px;
+  padding: 0px
+}
+
+/* 8.5.3 Убираем макеркры*/
+.breadcumbs li{
+  list-style-type: none;
+}
+
+/* 8.5.4 Добавлем контейнер*/
+.breadcumbs {
+  display: flex;
+  width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/* 8.5.5 Добавлем контейнер*/
+.title-inner {
+  display: flex;
+  width: 1150px;
+  margin-left:auto;
+  margin-right: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+
+}
+
+.title-inner h1 {
+  margin: 0px;
+  padding: 0px
+}
+
+/* 9.Разметка фиьлтра товаров*/
+/* 9.1 Обнуляем расстояния */
+.fliter-wrap {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* 9.2 Добавляем общий контейнер для фильтров */
+.fliter-wrap {
+display: flex;
+flex-wrap: wrap;
+
+width: 1150px;
+margin-left: auto;
+margin-right: auto;
+padding-left: 25px;
+padding-right: 25px;
+}
+
+/* 9.3 Добавляем размеры выпадалки, ползунка, радио и чекбо */
+.fliter-wrap select {
+  width: 196px;
+  height: 40px;
+}
+
+.price-range {
+  width: 220px;
+  height: 40px;
+}
+
+.fat-radio {
+  width: 417px;
+  height: 40px;
+}
+
+.filling-checkbox {
+  width: 700px;
+  height: 40px;
+}
+
+.fliter-wrap button {
+  width: 146px;
+  height: 40px;
+}
+
+/* 10. Размечаем результаты фильтрации */
+/* 10.1 Обнуляем расстояния для результатов фильтрации */
+.catalog-list {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* 10.2 Добавляем общий контейнер */
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+
+/* 11.Размечаем пагинацию */
+/* 11.1 Обнуляем расстояния */
+.pagination-catalog {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* 11.2 Создаем контейнер*/
+.pagination-catalog {
+  display: flex;
+  border: 0px;
+  width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  justify-content: flex-end;
+}
+
+
+
 /*Наведение, фокус, активная для меню Каталог - доставка - О компании.
 not --> исключает второй уровень каталога*/
 .site-navigation a:not(.dark-link):hover {
@@ -74,6 +509,30 @@ not --> исключает второй уровень каталога*/
 }
 .sub-menu-list a:active {
   background-color: #D07058;
+}
+
+/* Отключаем отображение второго уровня меню */
+.sub-menu-list {
+  display: none;
+}
+/* Отключаем форму логина */
+.login-form {
+display: none;
+}
+
+/* Отключаем поисковое поле */
+.search-form {
+  display: none;
+}
+
+/* Отключаем обратную связь */
+.modal-feedback {
+  display: none;
+}
+
+/* Отключаем два последних слайда */
+.main-hero-slider-item li:nth-of-type(1n+2) {
+  display: none;
 }
 
 /*Наведение, фокус, активная для черных ссылок (кроме главн. меню)*/
@@ -137,11 +596,22 @@ not --> исключает второй уровень каталога*/
 
 /*Красная кнпока - отправить / хочу шоколадки / давайте оба*/
 .main {
-  font-size: 18px;
-  font-weight: 700;
-  color: #ffffff;
-  background-image: linear-gradient(0deg, #E74A35 0%, #F26843 100%);
-  box-shadow: 0 1px 2px 0 #AC1000;
+display: inline-block;
+ padding: 12px 44px;
+ font-weight: 600;
+ font-size: 31px;
+ line-height: 41px;
+ text-align: center;
+ color: #ffffff;
+ vertical-align: top;
+ text-decoration: none;
+ text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+ background: #f26843;
+ background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+ border-radius: 50px;
+ box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+ border: none;
+ cursor: pointer;
 }
 
 .main:hover {
@@ -149,7 +619,7 @@ background-image: linear-gradient(180deg, #F38567 0%, #EB6F5D 100%);
 box-shadow: 0 1px 2px 0 #AC1000;
 }
 
-.main:focus {
+.main:active {
   background-image: linear-gradient(0deg, #EB795E 0%, #DA4C35 67%);
   box-shadow: inset 0 2px 2px 0 #942718;
 }
@@ -176,7 +646,7 @@ box-shadow: 0 1px 2px 0 #AC1000;
 /*Далее идут два промо-блока - малинки и шоколадки*/
 .main-promo-1 {
   background-color: #C82C55;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/raspberry-background.jpg");
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/raspberry-background.jpg");
   background-repeat: no-repeat;
 }
 
@@ -194,7 +664,7 @@ box-shadow: 0 1px 2px 0 #AC1000;
 
 .main-promo-2 {
   background-color: #3E1E0E;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/chocolate-background.jpg");
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/chocolate-background.jpg");
   background-repeat: no-repeat;
 }
 
@@ -212,7 +682,7 @@ box-shadow: 0 1px 2px 0 #AC1000;
 
 .features-list { /*Преимущества магазина Глэйси*/
   background-color: #EEE3CD;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/wafer-background.jpg");
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/wafer-background.jpg");
   background-repeat: repeat;
   color: #323232;
   font-size: 16px;
@@ -228,7 +698,7 @@ box-shadow: 0 1px 2px 0 #AC1000;
 .new-article{ /*Раздел новая статья*/
 background-color: #ffffff;
 width: 560px;
-background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/article-background.jpg");
+background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/article-background.jpg");
 background-repeat: no-repeat;
 background-position: right;
 background-size: contain;
@@ -243,10 +713,20 @@ font-weight: 500;
   line-height: 30px;
 }
 
-.email-subscribe { /*Раздел email подписка*/
+
+
+.email-subscribe { /*Раздел email подписка #F8F7F4*/
+  font-size: 16px;
+  line-height: 22px;
   background-color: #F8F7F4;
   width: 560px;
   color: #5A5A5A;
+
+  border-radius: 20px;
+  border: 6px solid rgba(0, 0, 0, 0);
+  border-image-source:  url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/form-border.png");
+  border-image-slice: 10;
+
 }
 
 /*Оформление раздела контактов*/
