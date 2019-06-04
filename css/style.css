@@ -16,6 +16,11 @@ button {
   font: inherit;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /*Отключаем маркеры в навигации*/
 nav li,
 .main-hero-slider-item,
@@ -97,7 +102,6 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 .site-navigation {
   display: flex;
   align-items: center;
-  padding-top: 100px;
 }
 
 
@@ -170,14 +174,14 @@ position: relative;
 }
 
 /* 3.2 Задаем размеры для рекламного блока 1 */
-.main-promo-1
-{min-height: 230px;
+.main-promo-raspberry{
+min-height: 230px;
 width: 560px;
 }
 
 /* Задаем размеры для рекламного блока 2 */
-.main-promo-2
-{min-height: 230px;
+.main-promo-chocolate {
+min-height: 230px;
 width: 560px;
 }
 
@@ -196,6 +200,7 @@ width: 560px;
   flex-wrap: wrap;
   width: 100%;
   padding-left: 0;
+  text-align: center;
 }
 
 /* 4.3 Задаем параметры товара*/
@@ -209,7 +214,6 @@ width: 560px;
 .catalog-list li:nth-of-type(4n+4) {
     margin-right: 0px;
 }
-
 
 /* 4.5 Размещаем надпись Хит */
 .catalog-item {
@@ -236,42 +240,115 @@ width: 560px;
   width: 1150px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 25px;
+  padding-left: 20px;
   padding-right: 25px;
 }
+
 .features-list {
   flex-direction: column;
   display: flex;
-  box-sizing: border-box;
-  padding: 25px;
+  border-radius: 20px;
 }
 
-/* 5.2 Добавляем разметку колонок преимуществ */
-.features-item {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-}
-
-/* 5.3 Обнуляем расстояния в списках */
+/* 5.2 Обнуляем расстояния в списках */
 .features-list > * {
   margin:0;
   padding:0;
   border:0
 }
 
-/* 5. Задаем размер кололнки преимуществ */
-.features-item li {
-    width: 540px;
+/* 5.3 Добавляем разметку колонок преимуществ */
+.features-item {
+  display: flex;
+  flex-wrap: wrap;
 }
 
+/* 5.4 Выстав. падинги для в колонках и заголовке */
+.features-item li:nth-of-type(2n+1) {
+  position: relative;
+  padding-left: 76px;
+  padding-right: 0px;
+  padding-bottom: 30px;
+}
+
+.features-item li:nth-of-type(2n+2) {
+  position: relative;
+  padding-left: 84px;
+}
+
+/* 5.5 Добавляем иконки к преимуществам */
+.feature-produce::before {
+  content: "";
+  position: absolute;
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-feature-ice-cream.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 49px;
+  height: 49px;
+  top:-10px;
+  left: 20px;
+}
+
+.feature-buyer::before  {
+  content: "";
+  position: absolute;
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-feature-cow.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 49px;
+  height: 49px;
+  top: -10px;
+  left: 26px;
+}
+
+.feature-milk::before  {
+  content: "";
+  position: absolute;
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-feature-eco.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 49px;
+  height: 49px;
+  top: -10px;
+  left: 20px;
+}
+
+.feature-delivery::before  {
+  content: "";
+  position: absolute;
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-feature-thermometer.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 49px;
+  height: 49px;
+  top: -10px;
+  left: 26px;
+}
+
+/* 5.6 Паддинг заголовка */
+.features-list b {
+  padding-top: 30px;
+  padding-left: 20px;
+}
+
+/* 5.7 Задаем размер кололнки преимуществ */
+.features-item li {
+    width: 560px;
+}
+
+/* 5.8 Задаем расстояние от заголовка до пунктов преимуществ*/
+.features-list b{
+  padding-bottom: 25px;
+}
+
+.features-item li {
+  box-sizing: border-box;
+}
 
 /* 6. Разметка популярной статьи + формы подписки */
 /* 6.1 Добавляем контейнер для статьи формы*/
 .article-subscribe-wrap {
   display: flex;
-
   width: 1150px;
   padding-left: 25px;
   padding-right: 25px;
@@ -289,7 +366,6 @@ width: 560px;
 .email-subscribe {
   width: 560px;
   height: 208px;
-  border-radius: 10px;
 }
 
 /* 7. Разметка карты */
@@ -297,22 +373,36 @@ width: 560px;
 .main-map {
   position: relative;
   display: flex;
-  width: 1150px;
-  padding-left: 25px;
-  padding-right: 25px;
-
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
 
 /* 7.1 Позиционируем контактные данные */
+
+.company-credential > * {
+  margin: 0px;
+  padding: 0px;
+}
+
 .company-credential {
   display: block;
   position: absolute;
   top:60px;
   right:60px;
-  width: 305px;
-  height:305px;
+  width: 310px;
+  padding-top: 30px;
+  padding-left: 25px;
+  padding-bottom: 30px;
+  border-radius: 20px;
+}
+
+.company-credential a{
+  margin-top: 30px;
+}
+
+.company-credential p:first-of-type {
+  margin-bottom: 25px;
 }
 
 /* 8. Разметка футера */
@@ -333,7 +423,6 @@ width: 560px;
   padding-left: 25px;
   padding-right: 25px;
   min-height: 100px;
-
 }
 
 /* 8.2 Контейнер для соц. сетей */
@@ -362,7 +451,6 @@ width: 560px;
 /* 8.5.1 Разметка крошек и заголовка */
 /* 8.5.2 Обнуляем расстояния в крошуках */
 .breadcumbs {
-
   margin: 0px;
   padding: 0px
 }
@@ -595,31 +683,40 @@ display: none;
 }
 
 /*Красная кнпока - отправить / хочу шоколадки / давайте оба*/
-.main {
-display: inline-block;
- padding: 12px 44px;
- font-weight: 600;
- font-size: 31px;
- line-height: 41px;
- text-align: center;
- color: #ffffff;
- vertical-align: top;
- text-decoration: none;
- text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
- background: #f26843;
- background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
- border-radius: 50px;
- box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
- border: none;
- cursor: pointer;
+.cta-button {
+  display: inline-block;
+  padding: 12px 44px;
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 41px;
+  text-align: center;
+  color: #ffffff;
+  vertical-align: top;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  background: #f26843;
+  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 50px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  border: none;
+  cursor: pointer;
 }
 
-.main:hover {
+.button-medium { /*Кнопки Хочу варенье/отправить/форма обратной связи*/
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0px;
+}
+
+.cta-button:hover {
 background-image: linear-gradient(180deg, #F38567 0%, #EB6F5D 100%);
 box-shadow: 0 1px 2px 0 #AC1000;
 }
 
-.main:active {
+.cta-button:active {
   background-image: linear-gradient(0deg, #EB795E 0%, #DA4C35 67%);
   box-shadow: inset 0 2px 2px 0 #942718;
 }
@@ -644,40 +741,64 @@ box-shadow: 0 1px 2px 0 #AC1000;
 }
 
 /*Далее идут два промо-блока - малинки и шоколадки*/
-.main-promo-1 {
+.main-promo-raspberry {
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
   background-color: #C82C55;
   background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/raspberry-background.jpg");
   background-repeat: no-repeat;
+  border-radius: 20px;
 }
 
-.main-promo-1 b {
+.main-promo-raspberry b {
   font-size: 35px;
   font-weight: 700;
   line-height: 41px;
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
-.main-promo-1 p{
+.main-promo-raspberry p{
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
+  margin: 0px;
 }
 
-.main-promo-2 {
+.main-promo-chocolate a {
+  margin-top: 45px;
+}
+
+.main-promo-raspberry a {
+  margin-top: 45px;
+}
+
+.main-promo-chocolate {
+  padding: 20px;
   background-color: #3E1E0E;
+  box-sizing: border-box;
   background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/chocolate-background.jpg");
   background-repeat: no-repeat;
+  border-radius: 20px;
 }
 
-.main-promo-2 b {
+.main-promo-chocolate b {
+  display: inline-block;
+  margin-bottom: 20px;
   font-size: 35px;
   font-weight: 700;
   line-height: 41px;
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
-.main-promo-2 p{
+.main-promo-chocolate p{
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
+  margin: 0px;
 }
 
 .features-list { /*Преимущества магазина Глэйси*/
@@ -694,6 +815,7 @@ box-shadow: 0 1px 2px 0 #AC1000;
   line-height: 30px;
   font-weight: 500;
 }
+
 
 .new-article{ /*Раздел новая статья*/
 background-color: #ffffff;
@@ -712,8 +834,6 @@ font-weight: 500;
   font-size: 24px;
   line-height: 30px;
 }
-
-
 
 .email-subscribe { /*Раздел email подписка #F8F7F4*/
   font-size: 16px;
