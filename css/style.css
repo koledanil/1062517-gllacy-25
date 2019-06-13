@@ -7,7 +7,7 @@ body {
   line-height: 20px;
   font-weight: 400;
   color: #ffffff;
-  background-color: #849D8F;
+  background-color: #8FA699;
 }
 
 /*Наследование шрифта кнопками и инпутами*/
@@ -37,6 +37,54 @@ text-decoration: none;
 border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.navigation-link {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+/* Дизайн кнопок Каталог-доставка-оплата при наведении */
+.site-navigation a:not(.dark-link):hover {
+  display: block;
+  background-color: #F7F6F3;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #323232;
+  font-weight: 700;
+  border-radius: 20px;
+}
+
+.site-navigation:hover .sub-menu-list {
+  display: block;
+}
+
+.site-navigation a:not(.dark-link):focus {
+  background: #D07058;
+  font-weight: 700;
+  color: #ffffff;
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.menu-active {
+  background: #D07058;
+  font-weight: 700;
+  color: #ffffff;
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.site-navigation a:not(.dark-link):active {
+  background: rgba(248,247,244,0.99);
+  background: #EDEDED;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: inset 0 2px 1px 0 #696969;
+  color: #323232;
+}
+
 /*Черная ссылка со стандартным подчеркиванием*/
 .dark-link {
   color: #323232;
@@ -52,9 +100,8 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
+  position: relative;
 }
-
-
 
 /* Разметка сетки */
 /* 1.Разметка главного меню */
@@ -67,6 +114,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 .main-header img {
   margin: 0px;
   padding: 0px;
+  margin-right: 25px;
 }
 
 /* 1.2 Добавляем контейнер по центру для меню / лого и так далее */
@@ -78,25 +126,30 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding-left: 25px;
   width: 1150px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto
 }
 
 /* 1.3 Объединяем логотип и пункты меню в один контейнер */
 .logo-site-navigation-wrap {
   display: flex;
+  flex-wrap: wrap;
+
 }
 
 /* 1.4 Разносим логотип+навигацию влево и функц. кнопки вправо */
 .nav-container {
   display: flex;
   justify-content: space-between;
+  margin-top: 9px;
 }
 
 /*1.5 Режим рабоыт, выключка по правому*/
 .timetable-shop {
   display: flex;
   flex-direction: column;
+  margin-top: 0px;
 }
+
 
 /*1.6 Вертикальное центрирование навигацион. меню*/
 .site-navigation {
@@ -104,15 +157,13 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   align-items: center;
 }
 
-
 /*1.7 Вертикальное центрирование фукнциональных кнопок*/
 .site-functional {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-
-
 
 /* 2. Размечаем слайдер */
 /* 2.1 Добавляем общий контейнер */
@@ -124,7 +175,6 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
-
 }
 
 /* 2.2 Обнуляем UL*/
@@ -137,26 +187,28 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding: 0px;
 }
 
-/* 2.3 Выравниваем кнопку и текст по центру */
-.main-hero-slider-wrap div {
-position: relative;
+.site-wrap {
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/hero-ice-cream-2.png");
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
-/* 2.4 Обнуляем расстояние между картинкой/текстом и кнопкой */
-.main-hero-slider-wrap p,
-.main-hero-slider-wrap img {
+/* 2.6 Задаем расстояние от заголовка до кнопки */
+.title-and-button div,
+ .title-and-button  p {
   margin: 0px;
   padding: 0px;
 }
 
-/* 2.5 Задаем позиционирование для заголовка с кнопкой */
-.main-hero-slider-item div {
-  position: absolute;
-  top: 390px;
-  text-align: center;
+.title-and-button {
+    padding-left: 220px;
+    padding-right: 220px;
+    text-align: center;
+    margin-top: 240px;
+    margin-bottom: 40px;
 }
-/* 2.6 Задаем расстояние от заголовка до кнопки */
-.main-hero-slider-item p {
+
+.title-and-button p {
   padding-bottom: 40px;
 }
 
@@ -167,6 +219,7 @@ position: relative;
   flex-direction: row;
   width: 1150px;
   margin: auto;
+  margin-bottom: 45px;
   padding-left: 25px;
   padding-right: 25px;
   justify-content: space-between;
@@ -190,8 +243,10 @@ width: 560px;
 .hit-wrap > * {
   margin:0;
   padding:0;
-  border:0
+  border:0;
 }
+
+
 
 /* 4.2 Добавляем контейнер для хитов в общий*/
 .catalog-list {
@@ -208,6 +263,7 @@ width: 560px;
   margin-right: 25px;
   width: 267px;
   height: auto;
+  margin-bottom: 45px;
 }
 
 /* 4.4 Задаем параметры товара*/
@@ -242,12 +298,13 @@ width: 560px;
   margin-right: auto;
   padding-left: 20px;
   padding-right: 25px;
+  margin-bottom: 40px;
 }
 
 .features-list {
   flex-direction: column;
   display: flex;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 /* 5.2 Обнуляем расстояния в списках */
@@ -355,25 +412,52 @@ width: 560px;
   margin-left: auto;
   margin-right: auto;
   justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.new-article p {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 4px;
+  margin-top: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+.new-article a {
+margin-right: 231px;
+
+}
+
+.email-subscribe p {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
 }
 
 /*6.2 Добавляем размеры статьи и формы подписки*/
 .new-article {
   width: 560px;
   height: 220px;
+  padding-left: 20px;
+  padding-top: 25px;
+  box-sizing: border-box;
 }
 
-.email-subscribe {
-  width: 560px;
-  height: 208px;
+.new-article a {
+  margin-top:20px;
 }
 
 /* 7. Разметка карты */
 /* 7.1 Добавляем контейнер для карты */
 .main-map {
+  width: 100%;
+  position: relative;
+}
+.main-map-wrap {
   position: relative;
   display: flex;
-  width: 1200px;
+  width: 1150px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -388,21 +472,23 @@ width: 560px;
 .company-credential {
   display: block;
   position: absolute;
-  top:60px;
-  right:60px;
-  width: 310px;
-  padding-top: 30px;
+  top: 60px;
+  right:0px;
   padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 30px;
   padding-bottom: 30px;
-  border-radius: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.40);
 }
 
 .company-credential a{
   margin-top: 30px;
+  width: 254px;
 }
 
 .company-credential p:first-of-type {
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 }
 
 /* 8. Разметка футера */
@@ -422,13 +508,50 @@ width: 560px;
   margin-right: auto;
   padding-left: 25px;
   padding-right: 25px;
-  min-height: 100px;
+  padding-top: 17px;
+  padding-bottom: 20px;
 }
 
 /* 8.2 Контейнер для соц. сетей */
 .social {
   display: flex;
-  width: 267px;
+  width: 186px;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.social-media {
+display: inline-block;
+width: 32px;
+height: 32px;
+box-shadow: 0px 0px 0px 4px rgba(255,255,255,0.4);
+border-radius: 50px;
+}
+
+.social-media svg {
+  opacity: 0.8;
+}
+
+.social-media:hover {
+  box-shadow: 0px 0px 0px 4px rgba(255,255,255,0.7);
+  border-radius: 50px;
+}
+
+.social-media svg:hover {
+  opacity: 1;
+}
+
+
+.social-media:active,
+.social-media:focus {
+  box-shadow: 0px 0px 0px 4px rgba(255,255,255,0.7);
+  border-radius: 50px;
+}
+
+.social-media svg:active,
+.social-media svg:focus {
+  opacity: 0.5;
 }
 
 /* 8.3 Контейнер для ссылок */
@@ -437,7 +560,22 @@ width: 560px;
   column-gap: 0px;
 }
 
+.distributor-important::before {
+  content: "";
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon_heart.svg");
+  position:absolute;
+  width: 15px;
+  height: 13px;
+  margin-top: 3px;
+  margin-left: -25px;
+}
+
 /* 8.4 Контейнер для создателя сайта */
+.footer-copyright > * {
+  padding: 0px;
+  margin: 0px
+}
+
 .footer-copyright {
   display: flex;
   flex-direction: column;
@@ -445,30 +583,56 @@ width: 560px;
   width: auto;
 }
 
+.footer-copyright img {
+  margin-bottom: 3px;
+}
+
 
 /* ************Разметка каталога************ */
 
 /* 8.5.1 Разметка крошек и заголовка */
 /* 8.5.2 Обнуляем расстояния в крошуках */
-.breadcumbs {
+.breadcumbs-wrap > * {
   margin: 0px;
-  padding: 0px
+  padding: 0px;
+}
+
+.breadcumbs-wrap {
+  width: 1150px;
+  margin: auto;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  position: relative;
+}
+
+.breadcumbs {
+  display: flex;
+  position: absolute;
+  top:-25px;
 }
 
 /* 8.5.3 Убираем макеркры*/
-.breadcumbs li{
+.breadcumbs li {
   list-style-type: none;
+  position: relative;
+  margin-right: 20px;
 }
 
+
+.breadcumbs li::after {
+  content: "»";
+  top: 0px;
+  right: -13px;
+  position: absolute;
+  }
+
+  .breadcumbs li:last-of-type::after {
+    content: "";
+  }
+
 /* 8.5.4 Добавлем контейнер*/
-.breadcumbs {
-  display: flex;
-  width: 1150px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 25px;
-  padding-right: 25px;
-}
+
 
 /* 8.5.5 Добавлем контейнер*/
 .title-inner {
@@ -478,57 +642,34 @@ width: 560px;
   margin-right: auto;
   padding-left: 25px;
   padding-right: 25px;
-
+  margin-bottom: 28px;
 }
 
 .title-inner h1 {
-  margin: 0px;
-  padding: 0px
-}
-
-/* 9.Разметка фиьлтра товаров*/
-/* 9.1 Обнуляем расстояния */
-.fliter-wrap {
+  font-size: 35px;
+  line-height: 41px;
   margin: 0px;
   padding: 0px;
 }
 
+/* 9.Разметка фиьлтра товаров*/
 /* 9.2 Добавляем общий контейнер для фильтров */
-.fliter-wrap {
+.filter-wrap {
 display: flex;
+flex-direction: column;
 flex-wrap: wrap;
-
 width: 1150px;
 margin-left: auto;
 margin-right: auto;
 padding-left: 25px;
 padding-right: 25px;
+margin-bottom: 40px;
 }
 
-/* 9.3 Добавляем размеры выпадалки, ползунка, радио и чекбо */
-.fliter-wrap select {
-  width: 196px;
-  height: 40px;
-}
-
-.price-range {
-  width: 220px;
-  height: 40px;
-}
-
-.fat-radio {
-  width: 417px;
-  height: 40px;
-}
-
-.filling-checkbox {
-  width: 700px;
-  height: 40px;
-}
-
-.fliter-wrap button {
-  width: 146px;
-  height: 40px;
+.filter-wrap fieldset {
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 /* 10. Размечаем результаты фильтрации */
@@ -549,7 +690,6 @@ padding-right: 25px;
   padding-right: 25px;
 }
 
-
 /* 11.Размечаем пагинацию */
 /* 11.1 Обнуляем расстояния */
 .pagination-catalog {
@@ -569,25 +709,6 @@ padding-right: 25px;
   justify-content: flex-end;
 }
 
-
-
-/*Наведение, фокус, активная для меню Каталог - доставка - О компании.
-not --> исключает второй уровень каталога*/
-.site-navigation a:not(.dark-link):hover {
-  background-color: #F7F6F3;
-  color: #323232;
-  font-weight: 700;
-  box-shadow: inset 0 2px 1px 0 #696969;
-}
-.site-navigation a:not(.dark-link):focus {
-  background-color: #EDEDED;
-  color: #323232;
-}
-.site-navigation a:not(.dark-link):active {
-  background-color: #D07058;
-  color: #323232;
-}
-
 /*Наведение, фокус, активная для подменю каталог*/
 .sub-menu-list a:hover {
   background-color: #FBDED7;
@@ -599,24 +720,59 @@ not --> исключает второй уровень каталога*/
   background-color: #D07058;
 }
 
-/* Отключаем отображение второго уровня меню */
-.sub-menu-list {
-  display: none;
+.sub-menu-list a:hover:first-child {
+  background-color: #FBDED7;
 }
-/* Отключаем форму логина */
-.login-form {
+
+.sub-menu-list {
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+position:absolute;
+left:-5px;
+top:60px;
+border-radius: 6px;
+min-width: 146px;
 display: none;
 }
 
-/* Отключаем поисковое поле */
-.search-form {
+.sub-menu-list li:first-of-type {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.search-container {
+  position: relative;
+}
+
+.sub-menu-list a{
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 0px;
+  padding-right: 25px;
+  display: flex;
+  height: 32px;
+  padding-left: 20px;
+}
+
+.search-form.background {
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  top:60px;
+  right:180px;
+  border-radius: 6px;
   display: none;
 }
 
-/* Отключаем обратную связь */
-.modal-feedback {
-  display: none;
+.search-form input {
+  padding-right: 15px;
+  width: 314px;
+  margin-top: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
+
 
 /* Отключаем два последних слайда */
 .main-hero-slider-item li:nth-of-type(1n+2) {
@@ -644,17 +800,60 @@ display: none;
 .main-footer a:active,
 .catalog-list a:not(.catalog-img):hover,
 .catalog-list a:not(.catalog-img):focus,
-.catalog-list a:not(.catalog-img):active
- {
+.catalog-list a:not(.catalog-img):active {
   color: #FFBC9E;
   text-decoration:none;
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
-/*Бекграунд для поиска/формы входа/корзины/второго уровня меню*/
-.background-nav {
+
+/* Задаем фон всплывающих окон*/
+.background {
   background-color: #F8F7F4;
   box-shadow: 0 20px 20px 0 rgba(0,0,0,0.40);
+}
+
+
+.login-background {
+  display: flex;
+  position: absolute;
+  right:108px;
+  top: 60px;
+  padding: 20px;
+  border-radius: 10px;
+  display: none;
+}
+
+.background form {
+  padding: 25px;
+}
+
+.cta-button.small {
+  height: 48px;
+  font-size: 18px;
+  line-height: 24px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.login-fields.input-field {
+  width: 244px;
+  margin-top: 0px;
+}
+
+.background input:first-of-type{
+  margin-bottom: 20px;
+}
+
+.login-button {
+  display: flex;
+  margin-top:20px;
+  flex-direction: row-reverse;
+}
+
+.login-button > * {
+  margin: 0px;
+  padding: 0px;
 }
 
 .sub-menu-list a {
@@ -663,6 +862,16 @@ display: none;
 }
 
 /*Cтиль кнопок Поиск и Вход, Корзина*/
+
+
+.site-functional li {
+  padding-right: 7px;
+}
+
+.site-functional li:last-of-type {
+  padding-right: 0px;
+}
+
 .functional-button {
   font-weight: 500;
   line-height: 16px;
@@ -670,8 +879,112 @@ display: none;
   text-decoration: none;
 }
 
-.functional-button { /*Прозрачный фон для кнопок поиск / вход */
+.functional-button.login {
+  padding-left: 44px;
+  padding-right: 18px;
+  position: relative;
+}
+
+.login::before {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 19px;
+  left:15px;
+  top:9px;
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-entrance.svg");
+}
+
+.login:hover::before {
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-entrance-hover.svg")
+}
+
+.functional-button-search {
   background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  display: block;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+}
+
+.functional-button-search::before {
+  content: "";
+  top:9px;
+  left: 9px;
+  height: 17px;
+  width: 17px;
+  position: absolute;
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-search.svg");
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+.functional-button-search:hover::before,
+.functional-button-search:active::before,
+.functional-button-search:focus::before {
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-search-hover.svg");
+}
+
+.functional-button-search:hover {
+  background: #ffffff;
+  position: relative;
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.search-sub:hover .search-form.background {
+  display: block;
+}
+
+.login-sub:hover .login-background {
+  display: block;
+}
+
+.cart-sub:hover .order-full-item{
+  display: block;
+}
+
+
+.functional-button.cart {
+  position: relative;
+  padding-left: 45px;
+}
+
+.functional-button.cart::before {
+  content: "";
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-basket.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top:8px;
+  left:16px;
+  width: 20px;
+  height: 20px;
+}
+
+.functional-button.cart:hover::before,
+.functional-button.cart:active::before,
+.functional-button.cart:focus::before {
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-basket-red.svg");
+}
+
+
+.functional-button.cart-null:hover::before,
+.functional-button.cart-null:active::before,
+.functional-button.cart-null:focus::before {
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-basket-index-hover.svg");
+}
+
+.functional-button { /*Прозрачный фон для кнопок вход корзина */
+  background: rgba(255, 255, 255, 0.2);
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  vertical-align: middle;
 }
 
 /*Эффект наведения фон для кнопок поиск / вход */
@@ -700,6 +1013,7 @@ display: none;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
 .button-medium { /*Кнопки Хочу варенье/отправить/форма обратной связи*/
@@ -711,14 +1025,18 @@ display: none;
   margin: 0px;
 }
 
-.cta-button:hover {
-background-image: linear-gradient(180deg, #F38567 0%, #EB6F5D 100%);
-box-shadow: 0 1px 2px 0 #AC1000;
+.cta-button:hover,
+.cta-button:focus  {
+  background-image: linear-gradient(180deg, #F38567 0%, #EB6F5D 100%);
+  box-shadow: 0 1px 2px 0 #AC1000;
+  box-shadow: 0 0 0 4px rgba(46, 136, 228, 0.5);
 }
 
 .cta-button:active {
   background-image: linear-gradient(0deg, #EB795E 0%, #DA4C35 67%);
   box-shadow: inset 0 2px 2px 0 #942718;
+  border-radius: 6px;
+  border-radius: 50px;
 }
 
 /*Cтиль нмоера телефона и режима работы*/
@@ -729,15 +1047,76 @@ box-shadow: 0 1px 2px 0 #AC1000;
   text-align: right;
 }
 
+.inner-timetable-shop {
+    margin-bottom: 5px;
+}
+
 .timetable-shop span { /*Отдельный дизайн для номера*/
   font-size: 22px;
   line-height: 24px;
+  padding-top: 3px;
 }
 
 .main-hero-slider-title {
+  display: inline-block;
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 27px;
+
   font-size: 60px;
-  font-weight:700;
   line-height: 60px;
+  font-weight: 800;
+}
+
+#product-1:checked ~ .site-wrap #slide1,
+#product-2:checked ~ .site-wrap #slide2,
+#product-3:checked ~ .site-wrap #slide3 {
+  display: block;
+}
+
+#product-1:checked ~ .site-wrap label[for="product-1"],
+#product-2:checked ~ .site-wrap label[for="product-2"],
+#product-3:checked ~ .site-wrap label[for="product-3"] {
+  background-color: #ffffff;
+}
+
+.slider-controls {
+  position: relative;
+  bottom: 63px;
+  left: 0;
+  top: 430px;
+  font-size: 0;
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+  vertical-align: top;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#product-1:checked ~ .site-wrap {
+  background-color: #849d8f;
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/hero-ice-cream-1.png");
+}
+
+#product-2:checked ~ .site-wrap {
+  background-color: #8996a6;
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/hero-ice-cream-2.png");
+}
+
+#product-3:checked ~ .site-wrap {
+  background-color: #9d8b84;
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/hero-ice-cream-3.png");
+}
+
+.slide {
+  display: none;
 }
 
 /*Далее идут два промо-блока - малинки и шоколадки*/
@@ -749,7 +1128,7 @@ box-shadow: 0 1px 2px 0 #AC1000;
   background-color: #C82C55;
   background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/raspberry-background.jpg");
   background-repeat: no-repeat;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 .main-promo-raspberry b {
@@ -776,12 +1155,14 @@ box-shadow: 0 1px 2px 0 #AC1000;
 }
 
 .main-promo-chocolate {
-  padding: 20px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: #3E1E0E;
   box-sizing: border-box;
   background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/chocolate-background.jpg");
   background-repeat: no-repeat;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 .main-promo-chocolate b {
@@ -816,18 +1197,18 @@ box-shadow: 0 1px 2px 0 #AC1000;
   font-weight: 500;
 }
 
-
 .new-article{ /*Раздел новая статья*/
-background-color: #ffffff;
-width: 560px;
-background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/article-background.jpg");
-background-repeat: no-repeat;
-background-position: right;
-background-size: contain;
-color: #323232;
-font-size: 16px;
-line-height: 22px;
-font-weight: 500;
+  background-color: #ffffff;
+  width: 560px;
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/article-background.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  color: #323232;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  border-radius: 15px;
 }
 
 .new-article b{
@@ -835,18 +1216,31 @@ font-weight: 500;
   line-height: 30px;
 }
 
+.title-wrap {
+  width: 309px;
+}
+
+.email-subscribe-background {
+  box-sizing: border-box;
+  height: 220px;
+  width: 560px;
+  padding: 5px;
+  border-radius: 15px;
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/form-border.jpg");
+  background-color: #92CDFF;
+}
+
 .email-subscribe { /*Раздел email подписка #F8F7F4*/
   font-size: 16px;
   line-height: 22px;
   background-color: #F8F7F4;
-  width: 560px;
+  height: 210px;
+  padding-left: 20px;
+  padding-right:21px;
+  padding-top: 30px;
+  box-sizing: border-box;
   color: #5A5A5A;
-
-  border-radius: 20px;
-  border: 6px solid rgba(0, 0, 0, 0);
-  border-image-source:  url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/form-border.png");
-  border-image-slice: 10;
-
+  border-radius: 12px;
 }
 
 /*Оформление раздела контактов*/
@@ -866,6 +1260,63 @@ font-weight: 500;
 /*Корзина с двумя товарами в ней*/
 .order-full-item {
   color: #323232;
+  line-height: 16px;
+    display: none;
+}
+
+.order-wrap {
+  display: flex;
+  position: absolute;
+  width: 542px;
+  right: 0px;
+  justify-content: center;
+  border-radius: 8px;
+  top:60px;
+}
+
+.small-close {
+  font-size: 0px;
+  background: transparent;
+  border: 0px;
+  cursor: pointer;
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-cross-small.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 11px;
+  height: 11px;
+}
+
+.small-close:hover,
+.small-close:focus {
+    background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-cross-small-hover.svg");
+}
+
+.table-wrap {
+  width: 507px;
+  padding-top: 5px;
+}
+
+.table-wrap td {
+  height:55px;
+}
+
+.cream-preview  {
+  padding-left: 9px;
+}
+
+.order-cream-info {
+  padding-left: 8px;
+}
+
+.order-cream-weight {
+width: 80px;
+text-align: right;
+}
+
+.order-cream-price {
+  width: 80px;
+  text-align: right;
+  padding-right: 18px;
 }
 
 .order-full-item .order-price-item { /*Измен цвет цены товара*/
@@ -873,14 +1324,18 @@ font-weight: 500;
 }
 
 .order-price-summary { /*Итого по правому краю*/
+  font-size: 16px;
+  line-height: 18px;
   text-align: right;
   border-top: 1px solid #CACAC7;
+  padding-top: 13px;
 }
+
 /*Привязывает все кнопки (с этим классом) к правому краю*/
 .button-right{
   text-align: right;
+  margin-bottom: 20px;
 }
-
 
 .pagination-slider { /*Убираем маркеры в пагинации слайдера*/
   list-style: none;
@@ -902,31 +1357,82 @@ font-weight: 500;
 
 /*Пагинация в каталоге*/
 .pagination-catalog {
-  list-style: none;
-  font: 16px;
-  font-weight: 500;
+  list-style-type: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  margin: 0px;
+  padding: 0px;
 }
 
 .pagination-catalog a {
-  color: #ffffff;
+  display: block;
+  padding: 4px 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
   text-decoration: none;
+  margin-bottom: 30px;
+}
+
+.pagination-catalog li:last-of-type {
+  margin-right: 25px;
+}
+
+.pagination-catalog li:last-of-type::after{
+  content: "";
+  display:block;
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-right-small.svg");
+  background-repeat: no-repeat;
+  width: 8px;
+  height: 14px;
+  position: absolute;
+  top: 8px;
+  right: 26px;
+  opacity: 1;
+}
+
+.pagination-catalog li:first-of-type::before{
+  content: "";
+  display:block;
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-right-small.svg");
+  background-repeat: no-repeat;
+  width: 8px;
+  height: 14px;
+  position: absolute;
+  top: 6px;
+  right: 193px;
+  opacity: 0.5;
+  transform: rotate(180deg);
+}
+
+.pagination-wrap{
+  position: relative;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  width: 1150px;
 }
 
 .pagination-catalog a:hover,
-.pagination-catalog a:focus {
-  background: rgba(255, 255, 255, 0.2);
-}
-
+.pagination-catalog a:focus,
 .pagination-catalog a:active {
+  background-color: rgba(255, 255, 255, 1);
   color: #323232;
-  background: #ffffff;
 }
 
-.filter fieldset {
-   border: none;
+.pagination-catalog-active a{
+  background-color: rgba(255, 255, 255, 1);
+  color: #323232;
 }
 
 .filter {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-right: 200px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -934,25 +1440,124 @@ font-weight: 500;
 
 /*Дизайн подписей к фильтрам*/
 .filter-title {
+  display: inline-block;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
+  margin-bottom: 5px;
+  margin-left: 17px;
 }
 
 .filter-background {/*Задаем стиль фона для полей сортировка/жирность/цена/наполнители*/
-    background: rgba(255, 255, 255, 0.2);
-    border: none;
-    height: 39px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  margin-bottom: 12px;
+}
+
+.filter-background {/*Задаем стиль фона для полей сортировка/жирность/цена/наполнители*/
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  margin-bottom: 12px;
+  border-radius: 20px;
+  margin-right: 12px;
+}
+
+.pop-background {
+  display: flex;
+  align-items:center;
+  height: 39px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 20px;
+  margin-right: 12px;
+  box-sizing: border-box;
+}
+
+.popularity-wrap select{
+  border: 0px;
 }
 
 .popularity { /*Оформление текста по поулярности*/
   font-weight: 500;
   color: #ffffff;
+  width: 196px;
+  background-color: transparent;
 }
 
 .popularity:hover{
-background: rgba(255, 255, 255, 0.2);
-color: #323232;
+  background: transparent;
+  color: #323232;
+}
+
+.fat-background {
+  display: flex;
+  align-items:center;
+  height: 39px;
+  width: 417px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 20px;
+  margin-right: 12px;
+  box-sizing: border-box;
+}
+
+.fill-background {
+  display: flex;
+  align-items:center;
+  height: 39px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 20px;
+  width: 705px;
+  margin-right: 11px;
+  box-sizing: border-box;
+}
+
+.price-background {
+  display: flex;
+  align-items:center;
+  height: 39px;
+  width: 194px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 20px;
+  margin-right: 11px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.price-scale {
+  width: inherit;
+  height: 4px;
+  background: #d7dcde;
+}
+
+.price-scale .bar {
+  z-index: 1;
+  width: 80%;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.toggle {
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 3px 1px rgba(171, 171, 171, 0.3);
+  position: absolute;
+  top: 9px;
+  left: 0;
+}
+
+.toggle-min {
+  left: 12px;
+}
+
+.toggle-max {
+  left: 140px;
 }
 
 .filter-apply { /*Оформление кнопки применить*/
@@ -963,11 +1568,16 @@ color: #323232;
   color: #ffffff;
   line-height: 18px;
   height: 39px;
+  padding-right: 28px;
+  padding-left: 28px;
+  border-radius: 20px;
+  align-self: flex-end;
+  margin-bottom: 12px;
 }
 
 .filter-apply:hover{
-    background: #FFFFFF;
-    color: #323232;
+  background: #FFFFFF;
+  color: #323232;
 }
 
 .filter-apply:active{
@@ -980,15 +1590,151 @@ color: #323232;
 .filter-checkbox:hover + label,
 .filter-checkbox:hover + label {
   cursor: pointer;
-  color:#323232;
 }
 
 .filter-radio:hover + label,
-.filter-radio:hover + label
- {
+.filter-radio:hover + label {
   cursor: pointer;
-  color:#323232;
 }
+
+
+.fat-filter input[type=radio],
+.fill-filter input[type=checkbox] {
+  display: none;
+}
+
+.fat-filter label {
+  margin-right: 18px;
+}
+
+.fat-filter label:last-of-type,
+.fill-filter label:last-of-type {
+  margin-right: 0px;
+}
+
+.fill-filter label {
+  margin-right: 20px;
+}
+
+.fat-filter label::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  vertical-align: text-top;
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-radio-off.svg");
+  background-repeat: no-repeat;
+}
+
+.fat-filter label:hover::before,
+.fat-filter label:focus::before {
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-radio-on.svg");
+}
+
+.fat-filter label:checked::before {
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-radio-on.svg");
+}
+
+.fill-filter label::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 20px;
+  margin-right: 7px;
+  vertical-align: text-top;
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-checkbox-off.svg");
+  background-repeat: no-repeat;
+}
+
+.fill-filter label:hover::before,
+.fill-filter label:focus::before {
+  width: 24px;
+  height: 20px;
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-checkbox-on.svg");
+}
+
+.fill-filter label:checked::before {
+  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-checkbox-on.svg");
+
+}
+
+/* Оформляем поля ввода */
+.input-field {
+  border: 1px solid rgba(178, 178, 178, 0.5);
+  border-radius: 6px;
+  padding-left: 16px;
+  box-sizing: border-box;
+  width: 360px;
+  height: 46px;
+  margin-top: 30px;
+  font-weight: 700;
+  color: #323232;
+}
+
+.input-field::placeholder {
+  color: #999999;
+  font-weight: 200;
+}
+
+.email-subscribe button {
+  margin-top: 29px;
+}
+
+.input-field:hover {
+   box-shadow:
+  0 0 0 2px rgba(178, 178, 178, 0.5);
+  border-radius: 6px;
+}
+
+.input-field:focus{
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(46, 136, 228, 0.5);
+  border-radius: 6px;
+}
+
+.modal-feedback {
+  position: absolute;
+  top: 200px;
+  left: 25%;
+  right: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 481px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  display: none;
+}
+
+.feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.input-field.feedback-username,
+.input-field.feedback-email,
+.input-field.feedback-text {
+   margin-top: 0px;
+}
+
+.input-field.feedback-email {
+  margin-bottom: 20px;
+}
+
+
+.feedback-text {
+  resize: none;
+  width: 431px;
+  height: 158px;
+  min-width: 100px;
+  min-height: 100px;
+  max-height: 300px;
+  padding-top: 10px;
+  margin-bottom: 25px;
+}
+
 
 /*Оформляем окно обратная связь*/
 .modal-feedback h2{
@@ -996,19 +1742,140 @@ color: #323232;
   font-size: 24px;
   line-height: 28px;
   font-weight: 500;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 20px;
 }
+
+.close-modal {
+  font-size: 0px;
+  width: 18px;
+  height:18px;
+  position: absolute;
+  top:28px;
+  right: 25px;
+  cursor: pointer;
+  border: 0px;
+  background-color: transparent;
+  outline: none;
+}
+
+.close-modal::before,
+.close-modal::after {
+  content: "";
+  position: absolute;
+  top:7px;
+  left: 0px;
+  width: 18px;
+  height: 3px;
+  background-color: #323232;
+}
+
+.close-modal:hover::before,
+.close-modal:hover::after {
+  content: "";
+  position: absolute;
+  top:7px;
+  left: 0px;
+  width: 18px;
+  height: 3px;
+  background-color: #E84D37;
+}
+
+.close-modal:focus::before,
+.close-modal:focus::after {
+  content: "";
+  position: absolute;
+  top:7px;
+  left: 0px;
+  width: 18px;
+  height: 3px;
+  background-color: #E84D37;
+  box-shadow: 0 0 0 4px rgba(46, 136, 228, 0.5);
+  border-radius: 6px;
+}
+
+.close-modal:active::before,
+.close-modal:active::after {
+  content: "";
+  position: absolute;
+  top:7px;
+  left: 0px;
+  width: 18px;
+  height: 3px;
+  background-color: #E84D37;
+}
+
+
+.close-modal::before {
+  transform: rotate(45deg);
+}
+
+.close-modal::after {
+  transform: rotate(-45deg);
+}
+
 
 /*Скрываем элементы, к-ые имеют данный класс*/
 .visually-hidden {
   position: absolute;
-  clip: rect(0, 0, 0, 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 iframe {
-  width:1200px;
+  width:100%;
   height:430px;
   border:0;
+}
+
+
+.map-jpg-wrap{
+  display: flex;
+  width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.map-jpg {
+  position: absolute;
+  top:0px;
+  z-index: -1;
+}
+
+.modal-show {
+  display: block;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
