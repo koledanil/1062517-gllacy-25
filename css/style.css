@@ -7,7 +7,6 @@ body {
   line-height: 20px;
   font-weight: 400;
   color: #ffffff;
-  background-color: #8FA699;
 }
 
 /*Наследование шрифта кнопками и инпутами*/
@@ -28,57 +27,81 @@ nav li,
 .main-footer-item,
 .catalog-item {
   list-style-type: none;
+
+}
+/* Отключаем стиль подчеркивания по умомлчанию*/
+
+a {
+    text-decoration: none;
 }
 
 /*Ссылка белого цвета и с прозрачнвм подчеркиванием*/
 .white-link{
-color: #ffffff;
-text-decoration: none;
-border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color:#ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .navigation-link {
+  display: flex;
   padding-left: 14px;
   padding-right: 14px;
 }
 
-/* Дизайн кнопок Каталог-доставка-оплата при наведении */
-.site-navigation a:not(.dark-link):hover {
-  display: block;
-  background-color: #F7F6F3;
+.site-navigation > li {
   padding-top: 10px;
   padding-bottom: 10px;
-  color: #323232;
-  font-weight: 700;
-  border-radius: 20px;
 }
 
-.site-navigation:hover .sub-menu-list {
-  display: block;
+.site-functional > li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.site-navigation .navigation-link {
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Дизайн кнопок Каталог-доставка-оплата при наведении */
+.site-navigation a:not(.dark-link):hover {
+  background-color: #F7F6F3;
+
+}
+.site-navigation a:not(.dark-link):hover .white-link  {
+  color: #323232;
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
 }
 
 .site-navigation a:not(.dark-link):focus {
   background: #D07058;
-  font-weight: 700;
+
+}
+.site-navigation a:not(.dark-link):focus .white-link{
   color: #ffffff;
-  border-radius: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
 }
 
-.menu-active {
+.menu-active{
   background: #D07058;
   font-weight: 700;
   color: #ffffff;
   border-radius: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-left: 14px;
+  padding-right: 14px;
+
+}
+
+.menu-active > span {
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
 }
 
 .site-navigation a:not(.dark-link):active {
   background: rgba(248,247,244,0.99);
   background: #EDEDED;
-
   padding-top: 10px;
   padding-bottom: 10px;
   box-shadow: inset 0 2px 1px 0 #696969;
@@ -188,9 +211,15 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .site-wrap {
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/hero-ice-cream-2.png");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/hero-ice-cream-2.png");
   background-repeat: no-repeat;
   background-position: top center;
+  position: relative;
+
+}
+
+.inner-wrap {
+  background-color: #92A89C;
 }
 
 /* 2.6 Задаем расстояние от заголовка до кнопки */
@@ -269,11 +298,47 @@ width: 560px;
 /* 4.4 Задаем параметры товара*/
 .catalog-list li:nth-of-type(4n+4) {
     margin-right: 0px;
+
 }
 
 /* 4.5 Размещаем надпись Хит */
 .catalog-item {
+z-index: 10;
   position: relative;
+}
+
+.catalog-list button{
+  position: absolute;
+  display: flex;
+  left:32px;
+  bottom:-60px;
+  display: none;
+}
+
+.catalog-item a::after {
+  content: "";
+  position: absolute;
+  height: 400px;
+  top: -10px;
+  left:-15px;
+  bottom: -21px;
+  right: -15px;
+  padding-right:20px;
+  z-index: -1;
+  background: rgba(248, 247, 244, 0.1);
+  box-shadow: 0 20px 20px 0 rgba(0,0,0,0.40);
+  border-radius: 8px;
+  display: none;
+}
+
+.catalog-item:hover a::after,
+.catalog-item:focus a::after   {
+  display: block;
+}
+
+.catalog-item:hover button,
+.catalog-item:focus button   {
+  display: block;
 }
 
 .hit {
@@ -337,7 +402,7 @@ width: 560px;
 .feature-produce::before {
   content: "";
   position: absolute;
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-feature-ice-cream.svg");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-feature-ice-cream.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   width: 49px;
@@ -349,7 +414,7 @@ width: 560px;
 .feature-buyer::before  {
   content: "";
   position: absolute;
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-feature-cow.svg");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-feature-cow.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   width: 49px;
@@ -361,7 +426,7 @@ width: 560px;
 .feature-milk::before  {
   content: "";
   position: absolute;
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-feature-eco.svg");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-feature-eco.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   width: 49px;
@@ -373,7 +438,7 @@ width: 560px;
 .feature-delivery::before  {
   content: "";
   position: absolute;
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-feature-thermometer.svg");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-feature-thermometer.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   width: 49px;
@@ -562,7 +627,7 @@ border-radius: 50px;
 
 .distributor-important::before {
   content: "";
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon_heart.svg");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon_heart.svg");
   position:absolute;
   width: 15px;
   height: 13px;
@@ -710,49 +775,67 @@ margin-bottom: 40px;
 }
 
 /*Наведение, фокус, активная для подменю каталог*/
-.sub-menu-list a:hover {
+
+
+.sub-menu-list li:hover {
   background-color: #FBDED7;
-}
-.sub-menu-list a:focus {
-  background-color: #F6B5A5;
-}
-.sub-menu-list a:active {
-  background-color: #D07058;
+  border-radius: 0px;
 }
 
-.sub-menu-list a:hover:first-child {
-  background-color: #FBDED7;
+.sub-menu-list li:first-of-type:hover {
+  border-radius: 0px;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.sub-menu-list li:last-of-type:hover {
+  border-radius: 0px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 
 .sub-menu-list {
-display: flex;
-flex-direction: column;
-flex-wrap: wrap;
-position:absolute;
-left:-5px;
-top:60px;
-border-radius: 6px;
-min-width: 146px;
-display: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position:absolute;
+  left:-5px;
+  top:60px;
+  border-radius: 6px;
+  min-width: 146px;
+  visibility: hidden;
+  z-index: 1;
 }
 
 .sub-menu-list li:first-of-type {
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
+
+.site-navigation li:hover > ul {
+  visibility: visible;
+}
+
+.site-navigation li:hover  a:not(.dark-link){
+    background-color: #ffffff;
+}
+
+.site-navigation li:hover  .white-link{
+    color: #323232;
+}
+
 .search-container {
   position: relative;
 }
 
 .sub-menu-list a{
   justify-content: flex-start;
-  align-items: center;
-  padding-bottom: 0px;
-  padding-right: 25px;
   display: flex;
-  height: 32px;
   padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .search-form.background {
@@ -864,7 +947,9 @@ display: none;
 /*Cтиль кнопок Поиск и Вход, Корзина*/
 
 
-.site-functional li {
+.site-functional > li {
+  padding-top: 15px;
+  padding-bottom: 15px;
   padding-right: 7px;
 }
 
@@ -892,11 +977,7 @@ display: none;
   height: 19px;
   left:15px;
   top:9px;
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-entrance.svg");
-}
-
-.login:hover::before {
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-entrance-hover.svg")
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-entrance.svg");
 }
 
 .functional-button-search {
@@ -915,31 +996,52 @@ display: none;
   height: 17px;
   width: 17px;
   position: absolute;
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-search.svg");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-search.svg");
   background-repeat: no-repeat;
   vertical-align: middle;
 }
 
-.functional-button-search:hover::before,
-.functional-button-search:active::before,
-.functional-button-search:focus::before {
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-search-hover.svg");
-}
-
-.functional-button-search:hover {
+.functional-button-search:hover,
+.functional-button-search:focus,
+.functional-button-search:active {
   background: #ffffff;
-  position: relative;
-  display: block;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
 }
 
-.search-sub:hover .search-form.background {
+.search-sub:hover .search-form.background,
+.search-sub:focus .search-form.background,
+.search-sub:active .search-form.background {
   display: block;
 }
 
-.login-sub:hover .login-background {
+.login:focus::before,
+.login:active::before,
+.login:hover::before {
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-entrance-hover.svg");
+}
+
+.login-sub:hover .login::before,
+.login-sub:focus .login::before,
+.login-sub:active .login::before   {
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-entrance-hover.svg");
+}
+
+.cart-sub:hover .cart::before,
+.cart-sub:focus .cart::before,
+.cart-sub:active .cart::before   {
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-basket-red.svg");
+}
+
+.login-sub:hover .login {
+background-color: #ffffff;
+color: #323232;
+}
+
+
+
+
+.login-sub:hover .login-background,
+.login-sub:focus .login-background,
+.login-sub:active .login-background {
   display: block;
 }
 
@@ -947,6 +1049,27 @@ display: none;
   display: block;
 }
 
+.cart-sub:hover .cart {
+  color: #323232;
+  background-color: #ffffff;
+}
+
+
+.site-navigation li:hover  a:not(.dark-link){
+    background-color: #ffffff;
+}
+
+.site-functional li:hover .functional-button-search::before,
+.functional-button-search:active::before,
+.functional-button-search:focus::before {
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-search-hover.svg");
+}
+
+.site-functional li:hover .functional-button-search,
+.site-functional li:active .functional-button-search,
+.site-functional li:active .functional-button-search  {
+  background-color: #ffffff;
+}
 
 .functional-button.cart {
   position: relative;
@@ -955,7 +1078,7 @@ display: none;
 
 .functional-button.cart::before {
   content: "";
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-basket.svg");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-basket.svg");
   background-repeat: no-repeat;
   position: absolute;
   top:8px;
@@ -964,17 +1087,16 @@ display: none;
   height: 20px;
 }
 
-.functional-button.cart:hover::before,
+.functional-button.cart:focus::before,
 .functional-button.cart:active::before,
 .functional-button.cart:focus::before {
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-basket-red.svg");
+    background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-basket-red.svg");
 }
-
 
 .functional-button.cart-null:hover::before,
 .functional-button.cart-null:active::before,
 .functional-button.cart-null:focus::before {
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-basket-index-hover.svg");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-basket-index-hover.svg");
 }
 
 .functional-button { /*Прозрачный фон для кнопок вход корзина */
@@ -1029,6 +1151,9 @@ display: none;
 .cta-button:focus  {
   background-image: linear-gradient(180deg, #F38567 0%, #EB6F5D 100%);
   box-shadow: 0 1px 2px 0 #AC1000;
+}
+
+.cta-button:focus  {
   box-shadow: 0 0 0 4px rgba(46, 136, 228, 0.5);
 }
 
@@ -1102,17 +1227,17 @@ display: none;
 
 #product-1:checked ~ .site-wrap {
   background-color: #849d8f;
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/hero-ice-cream-1.png");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/hero-ice-cream-1.png");
 }
 
 #product-2:checked ~ .site-wrap {
   background-color: #8996a6;
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/hero-ice-cream-2.png");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/hero-ice-cream-2.png");
 }
 
 #product-3:checked ~ .site-wrap {
   background-color: #9d8b84;
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/hero-ice-cream-3.png");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/hero-ice-cream-3.png");
 }
 
 .slide {
@@ -1126,7 +1251,7 @@ display: none;
   padding-right: 20px;
   box-sizing: border-box;
   background-color: #C82C55;
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/raspberry-background.jpg");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/raspberry-background.jpg");
   background-repeat: no-repeat;
   border-radius: 15px;
 }
@@ -1160,7 +1285,7 @@ display: none;
   padding-right: 20px;
   background-color: #3E1E0E;
   box-sizing: border-box;
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/chocolate-background.jpg");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/chocolate-background.jpg");
   background-repeat: no-repeat;
   border-radius: 15px;
 }
@@ -1184,7 +1309,7 @@ display: none;
 
 .features-list { /*Преимущества магазина Глэйси*/
   background-color: #EEE3CD;
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/wafer-background.jpg");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/wafer-background.jpg");
   background-repeat: repeat;
   color: #323232;
   font-size: 16px;
@@ -1200,7 +1325,7 @@ display: none;
 .new-article{ /*Раздел новая статья*/
   background-color: #ffffff;
   width: 560px;
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/article-background.jpg");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/article-background.jpg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
@@ -1226,7 +1351,7 @@ display: none;
   width: 560px;
   padding: 5px;
   border-radius: 15px;
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/form-border.jpg");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/form-border.jpg");
   background-color: #92CDFF;
 }
 
@@ -1279,7 +1404,7 @@ display: none;
   background: transparent;
   border: 0px;
   cursor: pointer;
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-cross-small.svg");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-cross-small.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 11px;
@@ -1288,7 +1413,7 @@ display: none;
 
 .small-close:hover,
 .small-close:focus {
-    background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-cross-small-hover.svg");
+    background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-cross-small-hover.svg");
 }
 
 .table-wrap {
@@ -1296,27 +1421,33 @@ display: none;
   padding-top: 5px;
 }
 
-.table-wrap td {
-  height:55px;
-}
-
 .cream-preview  {
   padding-left: 9px;
+  vertical-align: middle;
 }
 
 .order-cream-info {
-  padding-left: 8px;
+  padding-left: 9px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  vertical-align: top;
 }
 
 .order-cream-weight {
-width: 80px;
-text-align: right;
+  width: 80px;
+  vertical-align: top;
+  padding-top: 15px;
+  padding-bottom: 12px;
+
 }
 
 .order-cream-price {
   width: 80px;
+  vertical-align: top;
   text-align: right;
   padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 12px;
 }
 
 .order-full-item .order-price-item { /*Измен цвет цены товара*/
@@ -1382,7 +1513,7 @@ text-align: right;
 .pagination-catalog li:last-of-type::after{
   content: "";
   display:block;
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-right-small.svg");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-right-small.svg");
   background-repeat: no-repeat;
   width: 8px;
   height: 14px;
@@ -1395,7 +1526,7 @@ text-align: right;
 .pagination-catalog li:first-of-type::before{
   content: "";
   display:block;
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-right-small.svg");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-right-small.svg");
   background-repeat: no-repeat;
   width: 8px;
   height: 14px;
@@ -1623,17 +1754,17 @@ text-align: right;
   height: 22px;
   margin-right: 8px;
   vertical-align: text-top;
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-radio-off.svg");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-radio-off.svg");
   background-repeat: no-repeat;
 }
 
 .fat-filter label:hover::before,
 .fat-filter label:focus::before {
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-radio-on.svg");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-radio-on.svg");
 }
 
 .fat-filter label:checked::before {
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-radio-on.svg");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-radio-on.svg");
 }
 
 .fill-filter label::before {
@@ -1643,7 +1774,7 @@ text-align: right;
   height: 20px;
   margin-right: 7px;
   vertical-align: text-top;
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-checkbox-off.svg");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-checkbox-off.svg");
   background-repeat: no-repeat;
 }
 
@@ -1651,11 +1782,11 @@ text-align: right;
 .fill-filter label:focus::before {
   width: 24px;
   height: 20px;
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-checkbox-on.svg");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-checkbox-on.svg");
 }
 
 .fill-filter label:checked::before {
-  background-image: url("/Users/helf42/Documents/GitHub/1062517-gllacy-25/img/icon-checkbox-on.svg");
+  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-checkbox-on.svg");
 
 }
 
@@ -1703,9 +1834,25 @@ text-align: right;
   width: 481px;
   margin-left: auto;
   margin-right: auto;
+  z-index: 999999;
   border-radius: 15px;
   display: none;
 }
+
+.overlay {
+  position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 10;
+   background-color: rgba(0,0,0,0.3);
+   display: none;
+   animation: fadeIn 10s;
+}
+
+
+
 
 .feedback-form {
   display: flex;
@@ -1852,6 +1999,12 @@ iframe {
 
 .modal-show {
   display: block;
+  animation: bounce 0.6s;
+}
+
+.overlay-show {
+  display: block;
+  animation: fadeIn 0.6s;
 }
 
 .modal-error {
@@ -1877,5 +2030,33 @@ iframe {
   60%,
   80% {
     transform: translateX(10px);
+  }
+}
+
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

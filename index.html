@@ -12,6 +12,7 @@
     <input  class="visually-hidden" type="radio" id="product-2" name="toggle">
     <input class="visually-hidden" type="radio" id="product-3" name="toggle">
   <div class="site-wrap">
+    <div class="overlay"></div>
     <header class="main-header">
       <nav class="nav-container">
         <div class="logo-site-navigation-wrap">
@@ -19,18 +20,18 @@
           <img src="img/logo-gllacyshop.svg" width="154" height="64" alt="Логотип магазин Глэйси">
         </a>
         <ul class="site-navigation">
-          <li><a class="white-link navigation-link" href="#">Каталог</a>
+          <li><a class="navigation-link" href="#"><span class="white-link">Каталог</span></a>
           <ul class="sub-menu-list background">
             <li><a class="dark-link"><b>Новинки</b></a></li>
             <li><a class="dark-link" href="#">Сливочное</a></li>
             <li><a class="dark-link" href="#">Щербеты</a></li>
-            <li><a class="dark-link" href="#">Фруктовый лед Фруктовый лед</a></li>
+            <li><a class="dark-link" href="#">Фруктовый лед</a></li>
             <li><a class="dark-link" href="#">Мелорин</a></li>
-            <li><a class="dark-link" href="#">Фруктовый лед Фруктовый лед</a></li>
+            <li><a class="dark-link" href="#">Фруктовый лед</a></li>
             <li><a class="dark-link" href="#">Мелорин</a></li>
           </ul>
-          <li><a class="white-link navigation-link" href="#">Доставка и оплата</a></li>
-          <li><a class="white-link navigation-link" href="#">О компании</a></li>
+          <li><a class="navigation-link" href="#"><span class="white-link">Доставка и оплата</span></a></li>
+          <li><a class="navigation-link" href="#"><span class="white-link">О компании</span></a></li>
         </ul>
 </div>
         <ul class="site-functional">
@@ -41,7 +42,7 @@
               <button class="visually-hidden" type="submit" name="button-search">Искать</button>
             </form>
           </li>
-          <li class="login-sub"><a class="functional-button login" href="#">Вход</a>
+          <li><a class="functional-button login" href="#">Вход</a>
             <ul class="background login-background loginformjs">
               <li><form action="https://echo.htmlacademy.ru" method="post">
                 <h2 class="visually-hidden">Личный кабинет</h2>
@@ -107,24 +108,28 @@
           <img class="hit" src="img/icon-hit.svg" alt="Хитовое мороженое">
           <b class="product-price">310 ₽<span>/кг</span></b>
           <a class="white-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+          <button class="cta-button button-medium" type="submit">Быстрый просмотр</button>
         </li>
         <li class="catalog-item">
           <a class="catalog-img" href="#"><img src="img/ice-cream-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"></a>
           <img class="hit" src="img/icon-hit.svg" alt="Хитовое мороженое">
           <b class="product-price">380 ₽<span>/кг</span></b>
           <a class="white-link" href="#">Сливочно-кофейное с кусочками шоколада</a>
+          <button class="cta-button button-medium" type="submit">Быстрый просмотр</button>
         </li>
         <li class="catalog-item">
           <a class="catalog-img" href="#"><img src="img/ice-cream-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада"></a>
           <img class="hit" src="img/icon-hit.svg" alt="Хитовое мороженое">
           <b class="product-price">355 ₽<span>/кг</span></b>
           <a class="white-link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+          <button class="cta-button button-medium" type="submit">Быстрый просмотр</button>
         </li>
         <li class="catalog-item">
           <a class="catalog-img" href="#"><img src="img/ice-cream-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"></a>
           <img class="hit" src="img/icon-hit.svg" alt="Хитовое мороженое">
           <b class="product-price">415 ₽<span>/кг</span></b>
           <a class="white-link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
+          <button class="cta-button button-medium" type="submit">Быстрый просмотр</button>
         </li>
       </ul>
     </section>
@@ -199,22 +204,25 @@
       <p>Сделано: <a class="white-link" href="https://htmlacademy.ru">HTML Academy© 2019</a></p>
   </div>
   </footer>
+
 <section class="background modal-feedback">
 
   <form  class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
     <h2>Мы обязательно вам ответим!</h2>
       <label class="visually-hidden" for="feedback-username-id">Имя</label>
-      <input class="input-field feedback-username" type="text" name="feedback-username" id="feedback-username-id" placeholder="Как вас зовут?">
+      <input class="input-field feedback-username" type="text" name="feedback-username" id="feedback-username-id" placeholder="Как вас зовут?" tabindex="0">
       <label class="visually-hidden" for="feedback-email-id">Почта</label>
-      <input class="input-field feedback-email" type="text" name="feedback-email" id="feedback-email-id" placeholder="Ваша почта для ответа">
+      <input class="input-field feedback-email" type="email" name="feedback-email" id="feedback-email-id" placeholder="Ваша почта для ответа" tabindex="0">
       <label class="visually-hidden" for="feedback-text-id">Ваше сообщение</label>
-      <textarea class="input-field feedback-text" name="feedback-textarea" id="feedback-text-id" placeholder="Напишите что-нибудь..."></textarea>
+      <textarea class="input-field feedback-text" name="feedback-textarea" id="feedback-text-id" placeholder="Напишите что-нибудь..." tabindex="0"></textarea>
   <button class="cta-button small" type="submit" name="feedback-button" >
     Отправить
   </button>
   </form>
 <button class="close-modal" type="button" name="big-close-button">Закрыть</button>
+
 </section>
+
 </div>
 <script>
   var link = document.querySelector(".feedback-js");
@@ -223,6 +231,7 @@
   var uname = feedback.querySelector("[name=feedback-username]");
   var form = feedback.querySelector("form");
   var email = feedback.querySelector("[name=feedback-email]");
+  var overlay = document.querySelector(".overlay");
 
 
   var isStorageSupport = true;
@@ -237,6 +246,8 @@
   link.addEventListener("click", function (evt) {
     evt.preventDefault ();
     feedback.classList.add("modal-show");
+    overlay.classList.add("overlay-show");
+
 
     if (storage) {
       uname.value = storage;
@@ -249,7 +260,8 @@
   close.addEventListener("click", function (evt) {
     evt.preventDefault ();
     feedback.classList.remove("modal-error");
-    feedback.classList.remove("modal-show")
+    feedback.classList.remove("modal-show");
+    overlay.classList.remove("overlay-show");
   });
 
   form.addEventListener("submit", function (evt) {
@@ -264,16 +276,6 @@
         }
       }
     });
-
-    window.addEventListener("keydown", function (evt) {
-       if (evt.keyCode === 27) {
-         evt.preventDefault();
-         popup.classList.remove("modal-error");
-         if (feedback.classList.contains("modal-show")) {
-           feedback.classList.remove("modal-show");
-         }
-       }
-     });
 </script>
   </body>
 </html>
