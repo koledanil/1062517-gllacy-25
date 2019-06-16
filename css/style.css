@@ -64,9 +64,9 @@ a {
   padding-bottom: 10px;
 }
 
-/* Дизайн кнопок Каталог-доставка-оплата при наведении */
+
 .site-navigation a:not(.dark-link):hover {
-  background-color: #F7F6F3;
+  background-color: red;
 
 }
 .site-navigation a:not(.dark-link):hover .white-link  {
@@ -76,10 +76,14 @@ a {
 
 .site-navigation a:not(.dark-link):focus {
   background: #D07058;
-
+  color: #323232;
 }
-.site-navigation a:not(.dark-link):focus .white-link{
+
+.site-navigation a:not(.dark-link):focus{
   color: #ffffff;
+}
+
+.site-navigation a:not(.dark-link):focus .white-link{
   border-bottom: 1px solid rgba(255, 255, 255, 0);
 }
 
@@ -814,6 +818,7 @@ margin-bottom: 40px;
 
 .site-navigation li:hover > ul {
   visibility: visible;
+  animation: fadeIn 0.6s;
 }
 
 .site-navigation li:hover  a:not(.dark-link){
@@ -1010,6 +1015,7 @@ margin-bottom: 40px;
 .search-sub:focus .search-form.background,
 .search-sub:active .search-form.background {
   display: block;
+  animation: fadeIn 0.6s;
 }
 
 .login:focus::before,
@@ -1032,17 +1038,18 @@ margin-bottom: 40px;
 
 .login-sub:hover .login {
 background-color: #ffffff;
-color: #323232;
 }
 
 .login-sub:hover .login-background,
 .login-sub:focus .login-background,
 .login-sub:active .login-background {
   display: block;
+  animation: fadeIn 0.6s;
 }
 
 .cart-sub:hover .order-full-item{
   display: block;
+  animation: fadeIn 0.6s;
 }
 
 .cart-sub:hover .cart {
@@ -1193,12 +1200,14 @@ color: #323232;
 #product-2:checked ~ .site-wrap #slide2,
 #product-3:checked ~ .site-wrap #slide3 {
   display: block;
+  animation: fadeIn 0.6s;
 }
 
 #product-1:checked ~ .site-wrap label[for="product-1"],
 #product-2:checked ~ .site-wrap label[for="product-2"],
 #product-3:checked ~ .site-wrap label[for="product-3"] {
   background-color: #ffffff;
+  animation: fadeIn 0.6s;
 }
 
 .slider-controls {
@@ -1846,9 +1855,6 @@ color: #323232;
    display: none;
    animation: fadeIn 10s;
 }
-
-
-
 
 .feedback-form {
   display: flex;

@@ -34,27 +34,27 @@
           <li><a class="navigation-link" href="#"><span class="white-link">О компании</span></a></li>
         </ul>
 </div>
-        <ul class="site-functional">
-          <li class="search-sub"><a class="functional-button-search" href="#"><span class="visually-hidden">Поиск</span></a>
-            <form class="search-form background" action="https://echo.htmlacademy.ru" method="get">
-              <label class="visually-hidden" for="search-id">Поисковый запрос</label>
-              <input class="input-field" type="search" id="search-id" name="search" placeholder="Что ищем?">
-              <button class="visually-hidden" type="submit" name="button-search">Искать</button>
-            </form>
-          </li>
-          <li><a class="functional-button login" href="#">Вход</a>
-            <ul class="background login-background loginformjs">
-              <li><form action="https://echo.htmlacademy.ru" method="post">
-                <h2 class="visually-hidden">Личный кабинет</h2>
-                  <label class="visually-hidden" for="email-id">Электронная почта</label>
-                  <input class="login-fields input-field" type="email" name="email" id="email-id" placeholder="Электронная почта" autocomplete="email" required>
-                  <label class="visually-hidden" for="password-id">Пароль</label>
-                  <input class="login-fields input-field" type="password" name="password" id="password-id" placeholder="Пароль" autocomplete="current-password" required>
-                <div class="login-button"><p class="button-right"><a class="dark-link dark-link-underline" href="#">Забыли пароль?</a>
-                <a class="dark-link dark-link-underline" href="#">Новая регистрация</a></p>
-                <button class="cta-button small" type="submit" name="login-button"><span></span>Войти</button></div>
-                </form></li>
-            </ul>
+<ul class="site-functional">
+  <li class="search-sub"><a class="functional-button-search" href="#"><span class="visually-hidden">Поиск</span></a>
+    <form class="search-form background" action="https://echo.htmlacademy.ru" method="get">
+      <label class="visually-hidden" for="search-id">Поисковый запрос</label>
+      <input class="input-field" type="search" id="search-id" name="search" placeholder="Что ищем?">
+      <button class="visually-hidden" type="submit" name="button-search">Искать</button>
+    </form>
+  </li>
+  <li class="login-sub"><a class="functional-button login" href="#">Вход</a>
+    <ul class="background login-background">
+      <li><form action="https://echo.htmlacademy.ru" method="post">
+        <h2 class="visually-hidden">Личный кабинет</h2>
+          <label class="visually-hidden" for="email-id">Электронная почта</label>
+          <input class="login-fields input-field" type="email" name="email" id="email-id" placeholder="Электронная почта" autocomplete="email" required>
+          <label class="visually-hidden" for="password-id">Пароль</label>
+          <input class="login-fields input-field" type="password" name="password" id="password-id" placeholder="Пароль" autocomplete="current-password" required>
+        <div class="login-button"><p class="button-right"><a class="dark-link dark-link-underline" href="#">Забыли пароль?</a>
+        <a class="dark-link dark-link-underline" href="#">Новая регистрация</a></p>
+        <button class="cta-button small" type="submit" name="login-button"><span></span>Войти</button></div>
+        </form></li>
+    </ul>
             <li><a class="functional-button cart cart-null" href="#">Пусто</a></li>
           </ul>
       </nav>
@@ -242,6 +242,11 @@
   } catch (err) {
     isStorageSupport = false;
   }
+  overlay.addEventListener("click", function(evt) {
+    feedback.classList.remove("modal-error");
+    feedback.classList.remove("modal-show");
+    overlay.classList.remove("overlay-show");
+  });
 
   link.addEventListener("click", function (evt) {
     evt.preventDefault ();
