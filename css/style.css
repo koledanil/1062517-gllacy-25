@@ -211,7 +211,6 @@ a {
 }
 
 .site-wrap {
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/hero-ice-cream-2.png");
   background-repeat: no-repeat;
   background-position: top center;
   position: relative;
@@ -402,7 +401,7 @@ z-index: 10;
 .feature-produce::before {
   content: "";
   position: absolute;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-feature-ice-cream.svg");
+  background-image: url("../img/icon-feature-ice-cream.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   width: 49px;
@@ -414,7 +413,7 @@ z-index: 10;
 .feature-buyer::before  {
   content: "";
   position: absolute;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-feature-cow.svg");
+  background-image: url("../img/icon-feature-cow.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   width: 49px;
@@ -426,7 +425,7 @@ z-index: 10;
 .feature-milk::before  {
   content: "";
   position: absolute;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-feature-eco.svg");
+  background-image: url("../img/icon-feature-eco.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   width: 49px;
@@ -438,7 +437,7 @@ z-index: 10;
 .feature-delivery::before  {
   content: "";
   position: absolute;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-feature-thermometer.svg");
+  background-image: url("../img/icon-feature-thermometer.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   width: 49px;
@@ -627,7 +626,7 @@ border-radius: 50px;
 
 .distributor-important::before {
   content: "";
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon_heart.svg");
+  background-image: url("../img/icon_heart.svg");
   position:absolute;
   width: 15px;
   height: 13px;
@@ -821,7 +820,7 @@ margin-bottom: 40px;
     background-color: #ffffff;
 }
 
-.site-navigation li:hover  .white-link{
+.site-navigation li:hover .white-link{
     color: #323232;
 }
 
@@ -977,7 +976,7 @@ margin-bottom: 40px;
   height: 19px;
   left:15px;
   top:9px;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-entrance.svg");
+  background-image: url("../img/icon-entrance.svg");
 }
 
 .functional-button-search {
@@ -996,7 +995,7 @@ margin-bottom: 40px;
   height: 17px;
   width: 17px;
   position: absolute;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-search.svg");
+  background-image: url("../img/icon-search.svg");
   background-repeat: no-repeat;
   vertical-align: middle;
 }
@@ -1016,28 +1015,25 @@ margin-bottom: 40px;
 .login:focus::before,
 .login:active::before,
 .login:hover::before {
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-entrance-hover.svg");
+  background-image: url("../img/icon-entrance-hover.svg");
 }
 
 .login-sub:hover .login::before,
 .login-sub:focus .login::before,
 .login-sub:active .login::before   {
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-entrance-hover.svg");
+  background-image: url("../img/icon-entrance-hover.svg");
 }
 
 .cart-sub:hover .cart::before,
 .cart-sub:focus .cart::before,
 .cart-sub:active .cart::before   {
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-basket-red.svg");
+  background-image: url("../img/icon-basket-red.svg");
 }
 
 .login-sub:hover .login {
 background-color: #ffffff;
 color: #323232;
 }
-
-
-
 
 .login-sub:hover .login-background,
 .login-sub:focus .login-background,
@@ -1062,7 +1058,7 @@ color: #323232;
 .site-functional li:hover .functional-button-search::before,
 .functional-button-search:active::before,
 .functional-button-search:focus::before {
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-search-hover.svg");
+  background-image: url("../img/icon-search-hover.svg");
 }
 
 .site-functional li:hover .functional-button-search,
@@ -1078,7 +1074,7 @@ color: #323232;
 
 .functional-button.cart::before {
   content: "";
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-basket.svg");
+  background-image: url("../img/icon-basket.svg");
   background-repeat: no-repeat;
   position: absolute;
   top:8px;
@@ -1090,13 +1086,13 @@ color: #323232;
 .functional-button.cart:focus::before,
 .functional-button.cart:active::before,
 .functional-button.cart:focus::before {
-    background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-basket-red.svg");
+    background-image: url("../img/icon-basket-red.svg");
 }
 
 .functional-button.cart-null:hover::before,
 .functional-button.cart-null:active::before,
 .functional-button.cart-null:focus::before {
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-basket-index-hover.svg");
+  background-image: url("../img/icon-basket-index-hover.svg");
 }
 
 .functional-button { /*Прозрачный фон для кнопок вход корзина */
@@ -1227,17 +1223,17 @@ color: #323232;
 
 #product-1:checked ~ .site-wrap {
   background-color: #849d8f;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/hero-ice-cream-1.png");
+  background-image: url("../img/hero-ice-cream-1.png");
 }
 
 #product-2:checked ~ .site-wrap {
   background-color: #8996a6;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/hero-ice-cream-2.png");
+  background-image: url("../img/hero-ice-cream-2.png");
 }
 
 #product-3:checked ~ .site-wrap {
   background-color: #9d8b84;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/hero-ice-cream-3.png");
+  background-image: url("../img/hero-ice-cream-3.png");
 }
 
 .slide {
@@ -1251,7 +1247,7 @@ color: #323232;
   padding-right: 20px;
   box-sizing: border-box;
   background-color: #C82C55;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/raspberry-background.jpg");
+  background-image: url("../img/raspberry-background.jpg");
   background-repeat: no-repeat;
   border-radius: 15px;
 }
@@ -1285,7 +1281,7 @@ color: #323232;
   padding-right: 20px;
   background-color: #3E1E0E;
   box-sizing: border-box;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/chocolate-background.jpg");
+  background-image: url("../img/chocolate-background.jpg");
   background-repeat: no-repeat;
   border-radius: 15px;
 }
@@ -1309,7 +1305,7 @@ color: #323232;
 
 .features-list { /*Преимущества магазина Глэйси*/
   background-color: #EEE3CD;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/wafer-background.jpg");
+  background-image: url("../img/wafer-background.jpg");
   background-repeat: repeat;
   color: #323232;
   font-size: 16px;
@@ -1325,7 +1321,7 @@ color: #323232;
 .new-article{ /*Раздел новая статья*/
   background-color: #ffffff;
   width: 560px;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/article-background.jpg");
+  background-image: url("../img/article-background.jpg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
@@ -1351,7 +1347,7 @@ color: #323232;
   width: 560px;
   padding: 5px;
   border-radius: 15px;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/form-border.jpg");
+  background-image: url("../img/form-border.jpg");
   background-color: #92CDFF;
 }
 
@@ -1404,7 +1400,7 @@ color: #323232;
   background: transparent;
   border: 0px;
   cursor: pointer;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-cross-small.svg");
+  background-image: url("../img/icon-cross-small.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 11px;
@@ -1413,7 +1409,7 @@ color: #323232;
 
 .small-close:hover,
 .small-close:focus {
-    background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-cross-small-hover.svg");
+    background-image: url("../img/icon-cross-small-hover.svg");
 }
 
 .table-wrap {
@@ -1513,7 +1509,7 @@ color: #323232;
 .pagination-catalog li:last-of-type::after{
   content: "";
   display:block;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-right-small.svg");
+  background-image: url("../img/icon-right-small.svg");
   background-repeat: no-repeat;
   width: 8px;
   height: 14px;
@@ -1526,7 +1522,7 @@ color: #323232;
 .pagination-catalog li:first-of-type::before{
   content: "";
   display:block;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-right-small.svg");
+  background-image: url("../img/icon-right-small.svg");
   background-repeat: no-repeat;
   width: 8px;
   height: 14px;
@@ -1754,17 +1750,17 @@ color: #323232;
   height: 22px;
   margin-right: 8px;
   vertical-align: text-top;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-radio-off.svg");
+  background-image: url("../img/icon-radio-off.svg");
   background-repeat: no-repeat;
 }
 
 .fat-filter label:hover::before,
 .fat-filter label:focus::before {
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-radio-on.svg");
+  background-image: url("../img/icon-radio-on.svg");
 }
 
 .fat-filter label:checked::before {
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-radio-on.svg");
+  background-image: url("../img/icon-radio-on.svg");
 }
 
 .fill-filter label::before {
@@ -1774,7 +1770,7 @@ color: #323232;
   height: 20px;
   margin-right: 7px;
   vertical-align: text-top;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-checkbox-off.svg");
+  background-image: url("../img/icon-checkbox-off.svg");
   background-repeat: no-repeat;
 }
 
@@ -1782,11 +1778,11 @@ color: #323232;
 .fill-filter label:focus::before {
   width: 24px;
   height: 20px;
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-checkbox-on.svg");
+  background-image: url("../img/icon-checkbox-on.svg");
 }
 
 .fill-filter label:checked::before {
-  background-image: url("/Users/irw/Documents/GitHub/1062517-gllacy-25/img/icon-checkbox-on.svg");
+  background-image: url("../img/icon-checkbox-on.svg");
 
 }
 
