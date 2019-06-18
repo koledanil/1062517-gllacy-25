@@ -65,25 +65,12 @@ a {
 }
 
 
-.site-navigation a:not(.dark-link):hover {
-  background-color: red;
-
-}
-.site-navigation a:not(.dark-link):hover .white-link  {
-  color: #323232;
-  border-bottom: 1px solid rgba(255, 255, 255, 0);
-}
-
-.site-navigation a:not(.dark-link):focus {
+ .site-navigation a:not(.dark-link):focus-within {
   background: #D07058;
   color: #323232;
 }
 
-.site-navigation a:not(.dark-link):focus{
-  color: #ffffff;
-}
-
-.site-navigation a:not(.dark-link):focus .white-link{
+.site-navigation a:not(.dark-link):focus-within .white-link{
   border-bottom: 1px solid rgba(255, 255, 255, 0);
 }
 
@@ -306,7 +293,7 @@ width: 560px;
 
 /* 4.5 Размещаем надпись Хит */
 .catalog-item {
-z-index: 10;
+
   position: relative;
 }
 
@@ -334,15 +321,21 @@ z-index: 10;
   display: none;
 }
 
+.catalog-item:hover,
+.catalog-item:focus-within {
+z-index: 10;
+}
+
 .catalog-item:hover a::after,
-.catalog-item:focus a::after   {
+.catalog-item:focus-within a::after   {
   display: block;
 }
 
 .catalog-item:hover button,
-.catalog-item:focus button   {
+.catalog-item:focus-within button   {
   display: block;
 }
+
 
 .hit {
   position: absolute;
@@ -590,7 +583,7 @@ margin-right: 231px;
 }
 
 .social-media {
-display: inline-block;
+display: block;
 width: 32px;
 height: 32px;
 box-shadow: 0px 0px 0px 4px rgba(255,255,255,0.4);
@@ -602,7 +595,7 @@ border-radius: 50px;
 }
 
 .social-media:hover {
-  box-shadow: 0px 0px 0px 4px rgba(255,255,255,0.7);
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.7);
   border-radius: 50px;
 }
 
@@ -612,13 +605,15 @@ border-radius: 50px;
 
 
 .social-media:active,
-.social-media:focus {
+.social-media:focus-within {
   box-shadow: 0px 0px 0px 4px rgba(255,255,255,0.7);
   border-radius: 50px;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(46, 136, 228, 0.5);
 }
 
 .social-media svg:active,
-.social-media svg:focus {
+.social-media svg:focus-within {
   opacity: 0.5;
 }
 
@@ -780,18 +775,21 @@ margin-bottom: 40px;
 /*Наведение, фокус, активная для подменю каталог*/
 
 
-.sub-menu-list li:hover {
+.sub-menu-list li:hover,
+.sub-menu-list li:focus-within {
   background-color: #FBDED7;
   border-radius: 0px;
 }
 
-.sub-menu-list li:first-of-type:hover {
+.sub-menu-list li:first-of-type:hover,
+.sub-menu-list li:first-of-type:focus-within {
   border-radius: 0px;
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
 }
 
-.sub-menu-list li:last-of-type:hover {
+.sub-menu-list li:last-of-type:hover,
+.sub-menu-list li:last-of-type:focus-within {
   border-radius: 0px;
   border-bottom-right-radius: 6px;
   border-bottom-left-radius: 6px;
@@ -816,18 +814,29 @@ margin-bottom: 40px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.site-navigation li:hover > ul {
+.site-navigation li:hover > ul,
+.site-navigation li:focus-within > ul {
   visibility: visible;
   animation: fadeIn 0.6s;
 }
 
-.site-navigation li:hover  a:not(.dark-link){
+.site-navigation li:hover  a:not(.dark-link) {
     background-color: #ffffff;
 }
 
-.site-navigation li:hover .white-link{
+.site-navigation li:hover .white-link,
+.site-navigation li:focus-within .white-link{
     color: #323232;
 }
+
+
+
+.site-navigation li:focus-within  a:not(.dark-link) {
+  background-color: #ffffff;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(46, 136, 228, 0.5);
+}
+
 
 .search-container {
   position: relative;
@@ -868,10 +877,10 @@ margin-bottom: 40px;
 
 /*Наведение, фокус, активная для черных ссылок (кроме главн. меню)*/
 .login-form a:hover,
-.login-form a:focus,
+.login-form a:focus-within,
 .login-form a:active,
 .new-article a:hover,
-.new-articlea:focus,
+.new-articlea:focus-within,
 .new-article a:active {
     color: #E84D37;
     text-decoration:none;
@@ -880,13 +889,13 @@ margin-bottom: 40px;
 
 /*Наведение, фокус, активная для белых ссылок (кроме главн. меню)*/
 .hit a:not(.catalog-img):hover,
-.hit a:not(.catalog-img):focus,
+.hit a:not(.catalog-img):focus-within,
 .hit a:not(.catalog-img):active,
 .main-footer a:hover,
-.main-footer a:focus,
+.main-footer a:focus-within,
 .main-footer a:active,
 .catalog-list a:not(.catalog-img):hover,
-.catalog-list a:not(.catalog-img):focus,
+.catalog-list a:not(.catalog-img):focus-within,
 .catalog-list a:not(.catalog-img):active {
   color: #FFBC9E;
   text-decoration:none;
@@ -1006,57 +1015,77 @@ margin-bottom: 40px;
 }
 
 .functional-button-search:hover,
-.functional-button-search:focus,
+.functional-button-search:focus-within,
 .functional-button-search:active {
   background: #ffffff;
 }
 
+
+.functional-button-search:focus-within {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(46, 136, 228, 0.5);
+}
+
+
 .search-sub:hover .search-form.background,
-.search-sub:focus .search-form.background,
+.search-sub:focus-within .search-form.background,
 .search-sub:active .search-form.background {
   display: block;
   animation: fadeIn 0.6s;
 }
 
-.login:focus::before,
+.login:focus-within::before,
 .login:active::before,
 .login:hover::before {
   background-image: url("../img/icon-entrance-hover.svg");
 }
 
 .login-sub:hover .login::before,
-.login-sub:focus .login::before,
+.login-sub:focus-within .login::before,
 .login-sub:active .login::before   {
   background-image: url("../img/icon-entrance-hover.svg");
 }
 
 .cart-sub:hover .cart::before,
-.cart-sub:focus .cart::before,
+.cart-sub:focus-within .cart::before,
 .cart-sub:active .cart::before   {
   background-image: url("../img/icon-basket-red.svg");
 }
 
 .login-sub:hover .login {
-background-color: #ffffff;
+  background-color: #ffffff;
+}
+
+.login-sub:focus-within .login {
+  color: #323232;
+  background-color: #ffffff;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(46, 136, 228, 0.5);
 }
 
 .login-sub:hover .login-background,
-.login-sub:focus .login-background,
+.login-sub:focus-within .login-background,
 .login-sub:active .login-background {
   display: block;
   animation: fadeIn 0.6s;
 }
 
-.cart-sub:hover .order-full-item{
+.cart-sub:hover .order-full-item,
+.cart-sub:focus-within .order-full-item {
   display: block;
   animation: fadeIn 0.6s;
 }
 
-.cart-sub:hover .cart {
+.cart-sub:hover .cart,
+.cart-sub:focus-within .cart{
   color: #323232;
   background-color: #ffffff;
 }
 
+.cart-sub:focus-within .cart {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(46, 136, 228, 0.5);
+}
 
 .site-navigation li:hover  a:not(.dark-link){
     background-color: #ffffff;
@@ -1064,7 +1093,7 @@ background-color: #ffffff;
 
 .site-functional li:hover .functional-button-search::before,
 .functional-button-search:active::before,
-.functional-button-search:focus::before {
+.functional-button-search:focus-within::before {
   background-image: url("../img/icon-search-hover.svg");
 }
 
@@ -1090,16 +1119,22 @@ background-color: #ffffff;
   height: 20px;
 }
 
-.functional-button.cart:focus::before,
+.functional-button.cart:focus-within::before,
 .functional-button.cart:active::before,
-.functional-button.cart:focus::before {
+.functional-button.cart:focus-within::before {
     background-image: url("../img/icon-basket-red.svg");
 }
 
 .functional-button.cart-null:hover::before,
 .functional-button.cart-null:active::before,
-.functional-button.cart-null:focus::before {
+.functional-button.cart-null:focus-within::before {
   background-image: url("../img/icon-basket-index-hover.svg");
+}
+
+
+.functional-button.cart-null:focus-within {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(46, 136, 228, 0.5);
 }
 
 .functional-button { /*Прозрачный фон для кнопок вход корзина */
@@ -1114,7 +1149,7 @@ background-color: #ffffff;
 
 /*Эффект наведения фон для кнопок поиск / вход */
 .functional-button:hover,
-.functional-button:focus,
+.functional-button:focus-within,
 .functional-button:active {
   background: #F8F7F4;
   color: #323232;
@@ -1123,6 +1158,7 @@ background-color: #ffffff;
 /*Красная кнпока - отправить / хочу шоколадки / давайте оба*/
 .cta-button {
   display: inline-block;
+  vertical-align: middle;
   padding: 12px 44px;
   font-weight: 600;
   font-size: 31px;
@@ -1151,12 +1187,13 @@ background-color: #ffffff;
 }
 
 .cta-button:hover,
-.cta-button:focus  {
+.cta-button:focus-within  {
   background-image: linear-gradient(180deg, #F38567 0%, #EB6F5D 100%);
   box-shadow: 0 1px 2px 0 #AC1000;
 }
 
-.cta-button:focus  {
+.cta-button:focus-within  {
+  outline: none;
   box-shadow: 0 0 0 4px rgba(46, 136, 228, 0.5);
 }
 
@@ -1176,21 +1213,19 @@ background-color: #ffffff;
 }
 
 .inner-timetable-shop {
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 .timetable-shop span { /*Отдельный дизайн для номера*/
   font-size: 22px;
   line-height: 24px;
-  padding-top: 3px;
+
 }
 
 .main-hero-slider-title {
-  display: inline-block;
   width: 700px;
   margin: 0 auto;
   margin-bottom: 27px;
-
   font-size: 60px;
   line-height: 60px;
   font-weight: 800;
@@ -1220,6 +1255,7 @@ background-color: #ffffff;
 
 .slider-controls label {
   display: inline-block;
+  vertical-align: middle;
   width: 17px;
   height: 17px;
   margin-right: 8px;
@@ -1265,7 +1301,7 @@ background-color: #ffffff;
   font-size: 35px;
   font-weight: 700;
   line-height: 41px;
-  display: inline-block;
+  display: block;
   margin-bottom: 20px;
 }
 
@@ -1296,12 +1332,11 @@ background-color: #ffffff;
 }
 
 .main-promo-chocolate b {
-  display: inline-block;
+  display: block;
   margin-bottom: 20px;
   font-size: 35px;
   font-weight: 700;
   line-height: 41px;
-  display: inline-block;
   margin-bottom: 20px;
 }
 
@@ -1417,7 +1452,7 @@ background-color: #ffffff;
 }
 
 .small-close:hover,
-.small-close:focus {
+.small-close:focus-within {
     background-image: url("../img/icon-cross-small-hover.svg");
 }
 
@@ -1506,7 +1541,7 @@ background-color: #ffffff;
   background-color: transparent;
   font-size: 16px;
   font-weight: 500;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   margin-bottom: 30px;
 }
@@ -1553,7 +1588,6 @@ background-color: #ffffff;
 }
 
 .pagination-catalog a:hover,
-.pagination-catalog a:focus,
 .pagination-catalog a:active {
   background-color: rgba(255, 255, 255, 1);
   color: #323232;
@@ -1562,6 +1596,13 @@ background-color: #ffffff;
 .pagination-catalog-active a{
   background-color: rgba(255, 255, 255, 1);
   color: #323232;
+}
+
+.pagination-catalog a:focus-within {
+  background-color: rgba(255, 255, 255, 1);
+  color: #323232;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(46, 136, 228, 0.5);
 }
 
 .filter {
@@ -1576,7 +1617,7 @@ background-color: #ffffff;
 
 /*Дизайн подписей к фильтрам*/
 .filter-title {
-  display: inline-block;
+  display: block;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -1764,7 +1805,7 @@ background-color: #ffffff;
 }
 
 .fat-filter label:hover::before,
-.fat-filter label:focus::before {
+.fat-filter label:focus-within::before {
   background-image: url("../img/icon-radio-on.svg");
 }
 
@@ -1775,6 +1816,7 @@ background-color: #ffffff;
 .fill-filter label::before {
   content: "";
   display: inline-block;
+  vertical-align: middle;
   width: 24px;
   height: 20px;
   margin-right: 7px;
@@ -1784,7 +1826,7 @@ background-color: #ffffff;
 }
 
 .fill-filter label:hover::before,
-.fill-filter label:focus::before {
+.fill-filter label:focus-within::before {
   width: 24px;
   height: 20px;
   background-image: url("../img/icon-checkbox-on.svg");
@@ -1823,7 +1865,7 @@ background-color: #ffffff;
   border-radius: 6px;
 }
 
-.input-field:focus{
+.input-field:focus-within{
   outline: none;
   box-shadow: 0 0 0 3px rgba(46, 136, 228, 0.5);
   border-radius: 6px;
@@ -1931,8 +1973,8 @@ background-color: #ffffff;
   background-color: #E84D37;
 }
 
-.close-modal:focus::before,
-.close-modal:focus::after {
+.close-modal:focus-within::before,
+.close-modal:focus-within::after {
   content: "";
   position: absolute;
   top:7px;
