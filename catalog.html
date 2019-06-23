@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Мороженое от компании Глейси</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
@@ -87,7 +88,7 @@
       </nav>
       <p class="timetable-shop inner-timetable-shop">
       С 10 до 20, ежедневно
-      <span>8 812 450-25-25</span>
+      <span><a href="tel:+78124502525" class="white-link">8 812 450-25-25</a></span>
       </p>
     </header>
 <main>
@@ -127,31 +128,31 @@
 </div>
 </div>
 </div>
+  <input class="visually-hidden" type="radio" name="fat-radio" id="fat-radio-id" value="0">
+  <input class="visually-hidden" type="radio" name="fat-radio" id="fat-radio-id-10" value="0" checked>
+  <input class="visually-hidden" type="radio" name="fat-radio" id="fat-radio-id-30" value="0">
+  <input class="visually-hidden" type="radio" name="fat-radio" id="fat-radio-id-40" value="0">
     <fieldset class="fat-filter">
       <legend class="filter-title">Жирность:</legend>
       <div class="filter-background fat-background">
-      <input class="filter-radio" type="radio" name="fat-radio" id="fat-radio-id" value="0">
-      <label for="fat-radio-id" tabindex="0">0%</label>
-      <input class="filter-radio" type="radio" name="fat-radio" id="fat-radio-id-10" value="0" checked>
-      <label for="fat-radio-id-10" tabindex="0">до 10%</label>
-      <input class="filter-radio" type="radio" name="fat-radio" id="fat-radio-id-30" value="0">
-      <label for="fat-radio-id-30" tabindex="0">до 30%</label>
-      <input class="filter-radio" type="radio" name="fat-radio" id="fat-radio-id-40" value="0">
-      <label for="fat-radio-id-40" tabindex="0">свыше 30%</label>
+      <label for="fat-radio-id" tabindex="-1">0%</label>
+      <label for="fat-radio-id-10" tabindex="-1">до 10%</label>
+      <label for="fat-radio-id-30" tabindex="-1">до 30%</label>
+      <label for="fat-radio-id-40" tabindex="-1">свыше 30%</label>
     </div>
     </fieldset>
-
+    <input class="visually-hidden filter-checkbox" type="checkbox" name="fill-checkbox" id="fill-checkbox-id-chocolate" value="chocolate">
+    <input class="visually-hidden filter-checkbox" type="checkbox" name="fill-checkbox" id="fill-checkbox-id-sugar" value="sugar">
+    <input class="visually-hidden filter-checkbox" type="checkbox" name="fill-checkbox" id="fill-checkbox-id-fruit" value="fruit">
+    <input class="visually-hidden filter-checkbox" type="checkbox" name="fill-checkbox" id="fill-checkbox-id-syrup" value="syrup">
+    <input class="visually-hidden filter-checkbox" type="checkbox" name="fill-checkbox" id="fill-checkbox-id-jam" value="jam">
     <fieldset class="fill-filter">
     <legend class="filter-title">Наполнители</legend>
-      <div class="filter-background fill-background"><input class="filter-checkbox" type="checkbox" name="fill-checkbox" id="fill-checkbox-id-chocolate" value="chocolate" checked>
+      <div class="filter-background fill-background">
       <label for="fill-checkbox-id-chocolate" tabindex="0">шоколадные</label>
-      <input class="filter-checkbox" type="checkbox" name="fill-checkbox" id="fill-checkbox-id-sugar" value="sugar" checked>
       <label for="fill-checkbox-id-sugar" tabindex="0">сахарные присыпки</label>
-      <input class="filter-checkbox" type="checkbox" name="fill-checkbox" id="fill-checkbox-id-fruit" value="fruit">
       <label for="fill-checkbox-id-fruit" tabindex="0">фрукты</label>
-      <input class="filter-checkbox" type="checkbox" name="fill-checkbox" id="fill-checkbox-id-syrup" value="syrup">
       <label for="fill-checkbox-id-syrup" tabindex="0">сиропы</label>
-      <input class="filter-checkbox" type="checkbox" name="fill-checkbox" id="fill-checkbox-id-jam" value="jam">
       <label for="fill-checkbox-id-jam" tabindex="0">джемы</label></div>
     </fieldset>
     <button class="filter-apply" type="submit" name="button-apply-filters">Применить</button>
@@ -235,10 +236,32 @@
   </ul>
   <div class="pagination-wrap">
   <ul class="pagination-catalog">
+    <li class="pagination-previous"><a class="no-pagination"><svg width="8px" height="12px" viewBox="0 0 8 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="1">
+              <g id="Catalog" transform="translate(-982.000000, -1493.000000)" fill="#C1C6CE" fill-rule="nonzero">
+                  <g id="Пагинатор" transform="translate(982.000000, 1485.000000)">
+                      <g id="icon-left-small" transform="translate(4.000000, 14.000000) rotate(-180.000000) translate(-4.000000, -14.000000) translate(0.000000, 7.000000)">
+                          <path d="M7.237,6.642 L1.729,1.133 C1.53128206,0.93528206 1.21071794,0.93528206 1.013,1.133 C0.81528206,1.33071794 0.81528206,1.65128206 1.013,1.849 L6.163,7 L1.012,12.15 C0.826482288,12.349731 0.832102872,12.6604048 1.02472372,12.8532947 C1.21734457,13.0461846 1.52801027,13.0522388 1.728,12.867 L7.237,7.358 C7.3325122,7.26335321 7.38624375,7.1344641 7.38624375,7 C7.38624375,6.8655359 7.3325122,6.73664679 7.237,6.642 Z" id="Shape"></path>
+                      </g>
+                  </g>
+              </g>
+          </g>
+      </svg></a></li>
     <li class="pagination-item pagination-catalog-active"><a>1</a></li>
     <li class="pagination-item"><a href="#">2</a></li>
     <li class="pagination-item"><a href="#">3</a></li>
     <li class="pagination-item"><a href="#">4</a></li>
+    <li class="pagination-next"><a href="#"><svg width="8px" height="12px" viewBox="0 0 8 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Catalog" transform="translate(-1164.000000, -1493.000000)" fill="#C1C6CE" fill-rule="nonzero">
+            <g id="Пагинатор" transform="translate(982.000000, 1485.000000)">
+                <g id="icon-right-small" transform="translate(182.000000, 7.000000)">
+                    <path d="M7.237,6.642 L1.729,1.133 C1.53128206,0.93528206 1.21071794,0.93528206 1.013,1.133 C0.81528206,1.33071794 0.81528206,1.65128206 1.013,1.849 L6.163,7 L1.012,12.15 C0.826482288,12.349731 0.832102872,12.6604048 1.02472372,12.8532947 C1.21734457,13.0461846 1.52801027,13.0522388 1.728,12.867 L7.237,7.358 C7.3325122,7.26335321 7.38624375,7.1344641 7.38624375,7 C7.38624375,6.8655359 7.3325122,6.73664679 7.237,6.642 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg></a></li>
   </ul>
 </div>
 </section>
@@ -253,7 +276,7 @@
       <li><a class="social-media" href="#"><span class="visually-hidden">Вконтакте</span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="#FFF"><path d="M16.637 14.495c.402-.019.719-.082.951-.188.326-.145.54-.33.641-.559.101-.229.15-.496.15-.797 0-.232-.058-.465-.174-.697-.116-.232-.322-.405-.617-.517-.264-.1-.592-.155-.984-.165a76.242 76.242 0 0 0-1.652-.014h-.339v2.965h.565c.571 0 1.057-.009 1.459-.028zM18.118 17.084c-.282-.081-.672-.125-1.166-.132a127.97 127.97 0 0 0-1.55-.009h-.79v3.493h.264c1.014 0 1.74-.003 2.18-.009a3.2 3.2 0 0 0 1.212-.245c.377-.157.633-.364.774-.625s.214-.562.214-.9c0-.446-.088-.788-.261-1.03-.17-.241-.464-.423-.877-.543z"/><path d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm6.602 20.531a3.73 3.73 0 0 1-1.124 1.327c-.552.415-1.161.71-1.823.886s-1.501.264-2.519.264h-6.121V8.987h5.443c1.13 0 1.957.038 2.48.113a5.126 5.126 0 0 1 1.561.5c.533.27.929.632 1.189 1.087.26.455.392.975.392 1.558 0 .678-.179 1.278-.536 1.795-.358.518-.863.92-1.517 1.208v.075c.917.182 1.642.559 2.179 1.13.537.571.807 1.325.807 2.261 0 .678-.138 1.283-.411 1.817z"/></g></svg></a></li>
     </ul>
     <ul class="main-footer-item link">
-      <li><a class="white-link distributor-important"><b>Для поставщиков</b></a></li>
+      <li><a class="white-link distributor-important" href="#"><b>Для поставщиков</b></a></li>
       <li><a class="white-link" href="#">Наши документы</a></li>
       <li><a class="white-link" href="#">О производстве</a></li>
       <li><a class="white-link" href="#">Экологические стандарты</a></li>
