@@ -20,12 +20,14 @@
     feedback.classList.remove("modal-error");
     feedback.classList.remove("modal-show");
     overlay.classList.remove("overlay-show");
+    document.body.style.overflow='auto';
   });
 
   link.addEventListener("click", function (evt) {
     evt.preventDefault ();
     feedback.classList.add("modal-show");
     overlay.classList.add("overlay-show");
+    document.body.style.overflow='hidden';
 
 
     if (storage) {
@@ -41,6 +43,7 @@
     feedback.classList.remove("modal-error");
     feedback.classList.remove("modal-show");
     overlay.classList.remove("overlay-show");
+    document.body.style.overflow='auto';
   });
 
   window.addEventListener("keydown", function (evt) {
@@ -49,6 +52,7 @@
       if (feedback.classList.contains("modal-show")) {
         feedback.classList.remove("modal-show");
         overlay.classList.remove("overlay-show");
+        document.body.style.overflow='auto';
       }
     }
   });
@@ -65,6 +69,8 @@
         }
       }
     });
+
+
 
     var map;
     function initMap() {
