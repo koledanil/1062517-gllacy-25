@@ -1,14 +1,15 @@
 body {
   margin: 0px;
   padding: 0px;
-  font-family: "Roboto", arial, sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   color: #ffffff;
+  min-width: 1200px;
+  background-color: #92A89C;
 }
 
-/*Наследование шрифта кнопками и инпутами*/
 input,
 button {
   font: inherit;
@@ -19,7 +20,6 @@ img {
   height: auto;
 }
 
-/*Отключаем маркеры в навигации*/
 nav li,
 .main-hero-slider-item,
 .features-item,
@@ -28,12 +28,10 @@ nav li,
   list-style-type: none;
 }
 
-/* Отключаем стиль подчеркивания по умомлчанию*/
 a {
   text-decoration: none;
 }
 
-/*Ссылка белого цвета и с прозрачнвм подчеркиванием*/
 .white-link {
   color: #ffffff;
   text-decoration: none;
@@ -92,18 +90,15 @@ a {
   color: #323232;
 }
 
-/*Черная ссылка со стандартным подчеркиванием*/
 .dark-link {
   color: #323232;
 }
 
-/*Черная ссылка с прозрачным подчеркиванием*/
 .dark-link-underline {
   text-decoration: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-/*Меню Каталог - доставка - О компании*/
 .site-navigation {
   font-size: 16px;
   line-height: 18px;
@@ -111,21 +106,22 @@ a {
   position: relative;
 }
 
-/* Разметка сетки */
-/* 1.Разметка главного меню */
-/* 1.1 Убираем маргины и паддинги в меню */
 .nav-container ul {
   margin: 0px;
   padding: 0px;
 }
 
-.main-header img {
+.main-logo {
   margin: 0px;
   padding: 0px;
   margin-right: 25px;
 }
 
-/* 1.2 Добавляем контейнер по центру для меню / лого и так далее */
+.main-logo:hover,
+.main-logo:focus {
+  opacity: 0.6;
+}
+
 .main-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -143,7 +139,6 @@ a {
   margin-right: auto
 }
 
-/* 1.3 Объединяем логотип и пункты меню в один контейнер */
 .logo-site-navigation-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,7 +147,6 @@ a {
       flex-wrap: wrap;
 }
 
-/* 1.4 Разносим логотип+навигацию влево и функц. кнопки вправо */
 .nav-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -164,7 +158,6 @@ a {
   min-height: 65px;
 }
 
-/*1.5 Режим рабоыт, выключка по правому*/
 .timetable-shop {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -176,7 +169,6 @@ a {
   margin-top: 0px;
 }
 
-/*1.6 Вертикальное центрирование навигацион. меню*/
 .site-navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -186,7 +178,6 @@ a {
           align-items: center;
 }
 
-/*1.7 Вертикальное центрирование фукнциональных кнопок*/
 .site-functional {
   position: relative;
   display: -webkit-box;
@@ -201,8 +192,6 @@ a {
           align-items: center;
 }
 
-/* 2. Размечаем слайдер */
-/* 2.1 Добавляем общий контейнер */
 .main-hero-slider-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -217,7 +206,6 @@ a {
           justify-content: center;
 }
 
-/* 2.2 Обнуляем UL*/
 .main-hero-slider-wrap>* {
   margin: 0px;
   padding: 0px;
@@ -238,7 +226,6 @@ a {
   background-color: #92A89C;
 }
 
-/* 2.6 Задаем расстояние от заголовка до кнопки */
 .title-and-button div,
 .title-and-button p {
   margin: 0px;
@@ -257,8 +244,6 @@ a {
   padding-bottom: 40px;
 }
 
-/* 3. Размечаем промо */
-/*3.1 Делаем контейнер */
 .main-promo-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -279,27 +264,22 @@ a {
       flex-wrap: wrap;
 }
 
-/* 3.2 Задаем размеры для рекламного блока 1 */
 .main-promo-raspberry {
   min-height: 230px;
   width: 560px;
 }
 
-/* Задаем размеры для рекламного блока 2 */
 .main-promo-chocolate {
   min-height: 230px;
   width: 560px;
 }
 
-/* 4. Размечаем хитов */
-/* 4.1 Обнуляем все растояния у хитов. */
 .hit-wrap>* {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-/* 4.2 Добавляем контейнер для хитов в общий*/
 .catalog-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -315,7 +295,6 @@ a {
   text-align: center;
 }
 
-/* 4.3 Задаем параметры товара*/
 .catalog-list li {
   margin-right: 25px;
   width: 267px;
@@ -323,12 +302,10 @@ a {
   margin-bottom: 45px;
 }
 
-/* 4.4 Задаем параметры товара*/
 .catalog-list li:nth-of-type(4n+4) {
   margin-right: 0px;
 }
 
-/* 4.5 Размещаем надпись Хит */
 .catalog-item {
   position: relative;
 }
@@ -390,15 +367,12 @@ a {
   left: 0px;
 }
 
-/* 4.6 Размещаем цену */
 .catalog-item b {
   position: absolute;
   top: 225px;
   left: 0px;
 }
 
-/* 5. Доавляем разметку преимуществ глэйси */
-/* 5.1 Добавляем общий контейнер */
 .features-list-wrap {
   width: 1150px;
   margin-left: auto;
@@ -419,14 +393,12 @@ a {
   border-radius: 15px;
 }
 
-/* 5.2 Обнуляем расстояния в списках */
 .features-list>* {
   margin: 0;
   padding: 0;
   border: 0
 }
 
-/* 5.3 Добавляем разметку колонок преимуществ */
 .features-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -435,7 +407,6 @@ a {
       flex-wrap: wrap;
 }
 
-/* 5.4 Выстав. падинги для в колонках и заголовке */
 .features-item li:nth-of-type(2n+1) {
   position: relative;
   padding-left: 76px;
@@ -448,7 +419,6 @@ a {
   padding-left: 84px;
 }
 
-/* 5.5 Добавляем иконки к преимуществам */
 .feature-produce::before {
   content: "";
   position: absolute;
@@ -497,18 +467,15 @@ a {
   left: 26px;
 }
 
-/* 5.6 Паддинг заголовка */
 .features-list b {
   padding-top: 30px;
   padding-left: 20px;
 }
 
-/* 5.7 Задаем размер кололнки преимуществ */
 .features-item li {
   width: 560px;
 }
 
-/* 5.8 Задаем расстояние от заголовка до пунктов преимуществ*/
 .features-list b {
   padding-bottom: 25px;
 }
@@ -518,8 +485,6 @@ a {
           box-sizing: border-box;
 }
 
-/* 6. Разметка популярной статьи + формы подписки */
-/* 6.1 Добавляем контейнер для статьи формы*/
 .article-subscribe-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -535,13 +500,17 @@ a {
   margin-bottom: 40px;
 }
 
-.new-article p {
+.new-article-title {
   margin-left: 0px;
   margin-right: 0px;
   margin-bottom: 4px;
   margin-top: 0px;
   padding: 0px;
   border: 0px;
+  color: #323232;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
 }
 
 .new-article a {
@@ -554,12 +523,12 @@ a {
   border: 0px;
 }
 
-/*6.2 Добавляем размеры статьи и формы подписки*/
 .new-article {
   width: 560px;
   height: 220px;
   padding-left: 20px;
   padding-top: 25px;
+  border-radius: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -568,14 +537,9 @@ a {
   margin-top: 20px;
 }
 
-/* 7. Разметка карты */
-/* 7.1 Добавляем контейнер для карты */
 .main-map {
-  width: 100%;
   position: relative;
-  background-image: url('../img/index-map.png');
-  background-repeat: no-repeat;
-  background-position: center;
+  text-align: center;
 }
 
 .main-map-wrap {
@@ -583,22 +547,21 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 1150px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* 7.1 Позиционируем контактные данные */
 .company-credential>* {
   margin: 0px;
   padding: 0px;
 }
 
 .company-credential {
-  display: block;
   position: absolute;
-  top: 60px;
-  right: 0px;
+  width: 270px;
+  top: 55px;
+  right: 25px;
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 30px;
@@ -608,25 +571,43 @@ a {
           box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.40);
   z-index: 99900;
 }
+.feedback-button {
+  width: 100%;
+}
 
 .company-credential a {
   margin-top: 30px;
-  width: 254px;
+  width: inherit;
+  box-sizing: border-box;
 }
 
 .company-credential p:first-of-type {
   margin-bottom: 22px;
 }
 
-/* 8. Разметка футера */
-/* 8.1 Обнуляем все отступы */
-.main-footer>* {
+.company-credential {
+  background-color: rgba(255, 255, 255, 0.98);
+  color: #323232;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.company-credential b {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.credential-addr {
+  margin-bottom: 15px;
+}
+
+.main-footer > * {
   margin: 0;
   padding: 0;
   border: 0
 }
 
-/* 8.1 Добавляем общий контйнер для футера */
 .main-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -646,7 +627,6 @@ a {
   padding-bottom: 20px;
 }
 
-/* 8.2 Контейнер для соц. сетей */
 .social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -698,7 +678,6 @@ a {
   opacity: 0.5;
 }
 
-/* 8.3 Контейнер для ссылок */
 .link {
   -webkit-column-count: 2;
           column-count: 2;
@@ -716,7 +695,6 @@ a {
   margin-left: -25px;
 }
 
-/* 8.4 Контейнер для создателя сайта */
 .footer-copyright>* {
   padding: 0px;
   margin: 0px
@@ -736,23 +714,12 @@ a {
   width: auto;
 }
 
-#logo-htmlacademy {
+.link-logo-footer:hover,
+.link-logo-footer:focus {
   opacity: 0.6;
-}
-
-.link-logo-footer:hover {
   border-bottom: none;
 }
 
-.link-logo-footer:hover #logo-htmlacademy,
-.link-logo-footer:focus #logo-htmlacademy {
-  opacity: 1;
-  border-bottom: none;
-}
-
-/* ************Разметка каталога************ */
-/* 8.5.1 Разметка крошек и заголовка */
-/* 8.5.2 Обнуляем расстояния в крошуках */
 .breadcumbs-wrap>* {
   margin: 0px;
   padding: 0px;
@@ -775,7 +742,6 @@ a {
   top: -25px;
 }
 
-/* 8.5.3 Убираем макеркры*/
 .breadcumbs li {
   list-style-type: none;
   position: relative;
@@ -793,8 +759,6 @@ a {
   content: "";
 }
 
-/* 8.5.4 Добавлем контейнер*/
-/* 8.5.5 Добавлем контейнер*/
 .title-inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -812,10 +776,9 @@ a {
   line-height: 41px;
   margin: 0px;
   padding: 0px;
+  font-weight: 700;
 }
 
-/* 9.Разметка фиьлтра товаров*/
-/* 9.2 Добавляем общий контейнер для фильтров */
 .filter-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -840,14 +803,11 @@ a {
   margin: 0px;
 }
 
-/* 10. Размечаем результаты фильтрации */
-/* 10.1 Обнуляем расстояния для результатов фильтрации */
 .catalog-list {
   margin: 0px;
   padding: 0px;
 }
 
-/* 10.2 Добавляем общий контейнер */
 .catalog-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -861,14 +821,11 @@ a {
   padding-right: 25px;
 }
 
-/* 11.Размечаем пагинацию */
-/* 11.1 Обнуляем расстояния */
 .pagination-catalog {
   margin: 0px;
   padding: 0px;
 }
 
-/* 11.2 Создаем контейнер*/
 .pagination-catalog {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -884,37 +841,23 @@ a {
           justify-content: flex-end;
 }
 
-/*Наведение, фокус, активная для подменю каталог*/
-.sub-menu-list li:hover {
+.sub-menu-list a:hover {
   background-color: #FBDED7;
   border-radius: 0px;
 }
 
-.sub-menu-list li:focus-within {
+.sub-menu-list a:focus-within {
   background-color: #FBDED7;
   border-radius: 0px;
 }
 
-.sub-menu-list li:first-of-type:hover {
-  border-radius: 0px;
-  border-top-right-radius: 6px;
-  border-top-left-radius: 6px;
+.sub-menu-active {
+  background-color: #D07058;
+  color: #ffffff;
 }
 
-.sub-menu-list li:first-of-type:focus-within {
-  border-radius: 0px;
-  border-top-right-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-.sub-menu-list li:last-of-type:hover {
-  border-radius: 0px;
-  border-bottom-right-radius: 6px;
-  border-bottom-left-radius: 6px;
-}
-
-.sub-menu-list li:last-of-type:focus-within {
-  border-radius: 0px;
+.sub-menu-list li:last-of-type > a:hover {
+  background-color: #FBDED7;
   border-bottom-right-radius: 6px;
   border-bottom-left-radius: 6px;
 }
@@ -938,10 +881,12 @@ a {
   z-index: 1;
 }
 
-.sub-menu-list li:first-of-type {
-  padding-top: 10px;
-  padding-bottom: 10px;
+.sub-menu-list li:first-of-type > a  {
+  padding-top: 15px;
+  padding-bottom: 15px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .site-navigation li:hover ul {
@@ -994,7 +939,7 @@ a {
   padding-bottom: 8px;
 }
 
-.search-form.background {
+.search-form {
   position: absolute;
   margin: 0px;
   padding: 0px;
@@ -1002,6 +947,11 @@ a {
   right: 208px;
   border-radius: 6px;
   display: none;
+}
+
+.search-form-inner {
+  top: 54px;
+  right: 230px;
 }
 
 .search-form input {
@@ -1012,12 +962,12 @@ a {
   margin-right: 15px;
 }
 
-/* Отключаем два последних слайда */
+
 .main-hero-slider-item li:nth-of-type(1n+2) {
   display: none;
 }
 
-/*Наведение, фокус, активная для черных ссылок (кроме главн. меню)*/
+
 .dark-link:hover,
 .dark-link:focus {
   color: #E84D37;
@@ -1030,7 +980,6 @@ a {
   border-bottom: none;
 }
 
-/*Наведение, фокус, активная для белых ссылок (кроме главн. меню)*/
 .white-link:hover,
 .white-link:focus {
   color: #FFBC9E;
@@ -1038,7 +987,6 @@ a {
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
-/* Задаем фон всплывающих окон*/
 .background {
   background-color: #F8F7F4;
   -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.40);
@@ -1050,11 +998,17 @@ a {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
+  width: 294px;
   right: 108px;
   top: 54px;
   padding: 151px;
   border-radius: 10px;
   display: none;
+}
+
+.login-background.inner-login-background {
+  right: 124px;
+  top: 54px;
 }
 
 .background form {
@@ -1096,7 +1050,7 @@ a {
 }
 
 .reset-link {
-  padding-left: 15px;
+  padding-left: 12px;
 }
 
 .sub-menu-list a {
@@ -1104,7 +1058,6 @@ a {
   text-decoration: none;
 }
 
-/*Cтиль кнопок Поиск и Вход, Корзина*/
 .site-functional>li {
   padding-bottom: 15px;
   padding-right: 7px;
@@ -1214,7 +1167,6 @@ a {
 
 .login-sub:focus-within .login {
   color: #323232;
-  background-color: #ffffff;
   outline: none;
   -webkit-box-shadow: 0 0 0 4px rgba(46, 136, 228, 0.5);
           box-shadow: 0 0 0 4px rgba(46, 136, 228, 0.5);
@@ -1223,6 +1175,7 @@ a {
 .login-sub:hover .login-background,
 .login-sub:active .login-background {
   display: block;
+  z-index: 99999;
   -webkit-animation: fadeIn 0.6s;
           animation: fadeIn 0.6s;
 }
@@ -1309,7 +1262,6 @@ a {
 }
 
 .functional-button {
-  /*Прозрачный фон для кнопок вход корзина */
   background: rgba(255, 255, 255, 0.2);
   padding-left: 17px;
   padding-right: 17px;
@@ -1319,7 +1271,6 @@ a {
   vertical-align: middle;
 }
 
-/*Эффект наведения фон для кнопок поиск / вход */
 .functional-button:hover,
 .functional-button:focus,
 .functional-button:active {
@@ -1327,7 +1278,6 @@ a {
   color: #323232;
 }
 
-/*Красная кнпока - отправить / хочу шоколадки / давайте оба*/
 .cta-button {
   display: inline-block;
   vertical-align: middle;
@@ -1354,7 +1304,6 @@ a {
 }
 
 .button-medium {
-  /*Кнопки Хочу варенье/отправить/форма обратной связи*/
   text-align: center;
   padding-left: 20px;
   padding-right: 20px;
@@ -1390,7 +1339,6 @@ a {
   border-radius: 50px;
 }
 
-/*Cтиль нмоера телефона и режима работы*/
 .timetable-shop {
   font-size: 14px;
   line-height: 14px;
@@ -1402,7 +1350,6 @@ a {
 }
 
 .timetable-shop span {
-  /*Отдельный дизайн для номера*/
   font-size: 22px;
   line-height: 24px;
   font-weight: 700;
@@ -1490,7 +1437,6 @@ a {
   display: none;
 }
 
-/*Далее идут два промо-блока - малинки и шоколадки*/
 .main-promo-raspberry {
   padding-top: 10px;
   padding-left: 20px;
@@ -1504,11 +1450,12 @@ a {
   position: relative;
 }
 
-.main-promo-raspberry b {
+.main-promo-title {
   font-size: 35px;
   font-weight: 700;
   line-height: 41px;
   display: block;
+  margin-top: 0px;
   margin-bottom: 20px;
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 1);
 }
@@ -1546,16 +1493,6 @@ a {
   position: relative;
 }
 
-.main-promo-chocolate b {
-  display: block;
-  margin-bottom: 20px;
-  font-size: 35px;
-  font-weight: 700;
-  line-height: 41px;
-  margin-bottom: 20px;
-  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 1);
-}
-
 .main-promo-chocolate p {
   font-size: 18px;
   font-weight: 700;
@@ -1581,18 +1518,12 @@ a {
 }
 
 .new-article {
-  /*Раздел новая статья*/
   background-color: #ffffff;
   width: 560px;
   background-image: url("../img/article-background.jpg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
-  color: #323232;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 500;
-  border-radius: 15px;
 }
 
 .new-article b {
@@ -1630,21 +1561,6 @@ a {
   border-radius: 12px;
 }
 
-/*Оформление раздела контактов*/
-.company-credential {
-  background-color: rgba(255, 255, 255, 0.98);
-  color: #323232;
-  font-size: 16px;
-  line-height: 22px;
-}
-
-.company-credential b {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-}
-
-/*Корзина с двумя товарами в ней*/
 .order-full-item {
   color: #323232;
   line-height: 16px;
@@ -1717,12 +1633,10 @@ a {
 }
 
 .order-full-item .order-price-item {
-  /*Измен цвет цены товара*/
   color: #999999;
 }
 
 .order-price-summary {
-  /*Итого по правому краю*/
   font-size: 16px;
   line-height: 18px;
   text-align: right;
@@ -1730,24 +1644,20 @@ a {
   padding-top: 13px;
 }
 
-/*Привязывает все кнопки (с этим классом) к правому краю*/
 .button-right {
   text-align: right;
   margin-bottom: 20px;
 }
 
 .pagination-slider {
-  /*Убираем маркеры в пагинации слайдера*/
   list-style: none;
 }
 
 .pagination-slider a {
-  /*Убираем подчеркивание в пагинации слайдера*/
   border-bottom: none;
 }
 
 .product-price {
-  /*Размер цены морож. на карточках*/
   font-size: 45px;
   line-height: 13px;
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.50);
@@ -1757,7 +1667,6 @@ a {
   font-size: 30px;
 }
 
-/*Пагинация в каталоге*/
 .pagination-catalog {
   list-style-type: none;
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
@@ -1839,7 +1748,6 @@ a.no-pagination {
   font-weight: 500;
 }
 
-/*Дизайн подписей к фильтрам*/
 .filter-title {
   display: block;
   font-size: 14px;
@@ -1850,14 +1758,12 @@ a.no-pagination {
 }
 
 .filter-background {
-  /*Задаем стиль фона для полей сортировка/жирность/цена/наполнители*/
   background: rgba(255, 255, 255, 0.2);
   border: none;
   margin-bottom: 12px;
 }
 
 .filter-background {
-  /*Задаем стиль фона для полей сортировка/жирность/цена/наполнители*/
   background: rgba(255, 255, 255, 0.2);
   border: none;
   margin-bottom: 12px;
@@ -1887,7 +1793,6 @@ a.no-pagination {
 }
 
 .popularity {
-  /*Оформление текста по поулярности*/
   font-weight: 500;
   color: #ffffff;
   width: 196px;
@@ -1896,9 +1801,9 @@ a.no-pagination {
 }
 
 .popularity {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .popularity::-ms-expand {
@@ -1926,8 +1831,6 @@ a.no-pagination {
   background-image: url('../img/icon-down-dir-hover.svg');
   background-repeat: no-repeat;
 }
-
-
 
 .fat-background {
   display: -webkit-box;
@@ -2093,7 +1996,7 @@ a.no-pagination {
 #fat-radio-id-20:disabled~.fat-filter label[for="fat-radio-id-20"]::before,
 #fat-radio-id-30:disabled~.fat-filter label[for="fat-radio-id-30"]::before,
 #fat-radio-id-40:disabled~.fat-filter label[for="fat-radio-id-40"]::before {
-  opacity: 0.4;
+  opacity: 0.6;
   cursor: default;
   outline: none;
 }
@@ -2103,6 +2006,7 @@ a.no-pagination {
 #fat-radio-id-20:disabled~.fat-filter label[for="fat-radio-id-20"],
 #fat-radio-id-30:disabled~.fat-filter label[for="fat-radio-id-30"],
 #fat-radio-id-40:disabled~.fat-filter label[for="fat-radio-id-40"] {
+  opacity: 0.6;
   cursor: default;
   outline: none;
 }
@@ -2119,7 +2023,6 @@ a.no-pagination {
   cursor: pointer;
 }
 
-/* Жирность */
 .fat-filter label {
   margin-right: 18px;
 }
@@ -2192,11 +2095,30 @@ a.no-pagination {
   opacity: 1;
 }
 
+#fill-checkbox-id-chocolate:disabled~.fill-filter label[for="fill-checkbox-id-chocolate"]::before,
+#fill-checkbox-id-sugar:disabled~.fill-filter label[for="fill-checkbox-id-sugar"]::before,
+#fill-checkbox-id-fruit:disabled~.fill-filter label[for="fill-checkbox-id-fruit"]::before,
+#fill-checkbox-id-syrup:disabled~.fill-filter label[for="fill-checkbox-id-syrup"]::before,
+#fill-checkbox-id-jam:disabled~.fill-filter label[for="fill-checkbox-id-jam"]::before {
+  opacity: 0.6;
+  cursor: default;
+  outline: none;
+}
+
+#fill-checkbox-id-chocolate:disabled~.fill-filter label[for="fill-checkbox-id-chocolate"],
+#fill-checkbox-id-sugar:disabled~.fill-filter label[for="fill-checkbox-id-sugar"],
+#fill-checkbox-id-fruit:disabled~.fill-filter label[for="fill-checkbox-id-fruit"],
+#fill-checkbox-id-syrup:disabled~.fill-filter label[for="fill-checkbox-id-syrup"],
+#fill-checkbox-id-jam:disabled~.fill-filter label[for="fill-checkbox-id-jam"] {
+  opacity: 0.6;
+  cursor: default;
+  outline: none;
+}
+
 .fill-filter label {
   cursor: pointer;
 }
 
-/* Оформляем поля ввода */
 .input-field {
   border: 1px solid rgba(178, 178, 178, 0.5);
   border-radius: 6px;
@@ -2309,7 +2231,6 @@ a.no-pagination {
   margin-bottom: 25px;
 }
 
-/*Оформляем окно обратная связь*/
 .modal-feedback h2 {
   color: #323232;
   font-size: 24px;
@@ -2392,7 +2313,6 @@ a.no-pagination {
           transform: rotate(-45deg);
 }
 
-/*Скрываем элементы, к-ые имеют данный класс*/
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -2433,22 +2353,16 @@ a.no-pagination {
   left: 0;
   z-index: 10;
   display: none;
-  /* фон затемнения */
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
-  /* фиксированное позиционирование */
   cursor: default;
-  /* тип курсора */
   z-index: 99999;
-  border-radius:
 }
 
-/* активируем слой затемнения */
 .overlay1:target {
   display: block;
 }
 
-/* стили модального окна */
 .popup {
   top: -100%;
   right: 0;
@@ -2468,7 +2382,6 @@ a.no-pagination {
   border-radius: 15px;
 }
 
-/* активируем модальный блок */
 .overlay1:target+.popup {
   -webkit-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
@@ -2476,7 +2389,6 @@ a.no-pagination {
   top: 20%;
 }
 
-/* формируем кнопку закрытия */
 .popup h2 {
   color: #323232;
   font-size: 24px;
@@ -2565,7 +2477,6 @@ a.no-pagination {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
-
   10%,
   30%,
   50%,
@@ -2574,7 +2485,6 @@ a.no-pagination {
     -webkit-transform: translateX(-10px);
             transform: translateX(-10px);
   }
-
   20%,
   40%,
   60%,
@@ -2590,7 +2500,6 @@ a.no-pagination {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
-
   10%,
   30%,
   50%,
@@ -2599,7 +2508,6 @@ a.no-pagination {
     -webkit-transform: translateX(-10px);
             transform: translateX(-10px);
   }
-
   20%,
   40%,
   60%,
@@ -2614,17 +2522,14 @@ a.no-pagination {
     -webkit-transform: translateY(-2000px);
             transform: translateY(-2000px);
   }
-
   70% {
     -webkit-transform: translateY(30px);
             transform: translateY(30px);
   }
-
   90% {
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
   }
-
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
@@ -2636,17 +2541,14 @@ a.no-pagination {
     -webkit-transform: translateY(-2000px);
             transform: translateY(-2000px);
   }
-
   70% {
     -webkit-transform: translateY(30px);
             transform: translateY(30px);
   }
-
   90% {
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
   }
-
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
@@ -2657,7 +2559,6 @@ a.no-pagination {
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
@@ -2667,7 +2568,6 @@ a.no-pagination {
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
