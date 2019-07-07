@@ -20,7 +20,7 @@ img {
   height: auto;
 }
 
-nav li,
+.nav-container li,
 .main-hero-slider-item,
 .features-item,
 .main-footer-item,
@@ -76,7 +76,7 @@ a {
   padding-right: 14px;
 }
 
-.menu-active>span {
+.menu-active > span {
   border-bottom: 1px solid rgba(255, 255, 255, 0);
 }
 
@@ -237,7 +237,7 @@ a {
   padding-right: 220px;
   text-align: center;
   margin-top: 235px;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
 
 .title-and-button p {
@@ -262,16 +262,6 @@ a {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-.main-promo-raspberry {
-  min-height: 230px;
-  width: 560px;
-}
-
-.main-promo-chocolate {
-  min-height: 230px;
-  width: 560px;
 }
 
 .hit-wrap>* {
@@ -541,7 +531,10 @@ a {
 .main-map {
   position: relative;
   text-align: center;
+  height: 430px;
+  z-index: 0;
 }
+
 
 .main-map-wrap {
   position: relative;
@@ -691,16 +684,21 @@ a {
   opacity: 0.5;
 }
 
-
 .link {
-  -webkit-column-count: 2;
-          column-count: 2;
-  -webkit-column-gap: 0px;
-          column-gap: 0px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 330px;
+  margin-left: 35px;
+  font-size: 13px;
+  line-height: 22px;
 }
 
-.main-footer-item.link {
-  margin-left: 58px;
+.link li:nth-child(2n+1){
+  width: 140px;
 }
 
 .distributor-important::before {
@@ -1470,9 +1468,10 @@ padding-bottom: 24px;
           box-sizing: border-box;
   background-color: #C82C55;
   background-image: url("../img/raspberry-background.jpg");
-  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 15px;
-  position: relative;
+  min-height: 230px;
+  width: 560px;
 }
 
 .main-promo-title {
@@ -1494,15 +1493,13 @@ padding-bottom: 24px;
 }
 
 .main-promo-chocolate a {
-  position: absolute;
-  bottom: 22px;
-  right: 22px;
+  margin-top: 50px;
+  margin-bottom: 23px;
 }
 
-.main-promo-raspberry a {
-  position: absolute;
-  bottom: 22px;
-  right: 22px;
+ .main-promo-raspberry a {
+   margin-top: 50px;
+   margin-bottom: 23px;
 }
 
 .main-promo-chocolate {
@@ -1513,9 +1510,10 @@ padding-bottom: 24px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-image: url("../img/chocolate-background.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   border-radius: 15px;
-  position: relative;
+  min-height: 230px;
+  width: 560px;
 }
 
 .main-promo-chocolate p {
@@ -1525,8 +1523,6 @@ padding-bottom: 24px;
   margin: 0px;
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 1);
 }
-
-
 
 .features-list b {
   font-size: 24px;
@@ -2353,11 +2349,6 @@ a.no-pagination {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-#map {
-  height: 430px;
-  z-index: 0;
 }
 
 .modal-show {
